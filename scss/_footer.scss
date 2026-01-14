@@ -1,0 +1,158 @@
+// ============================================
+// Footer - 헤더 스타일
+// ============================================
+
+@use "variables" as *;
+
+/* 푸터영역 */
+#pc-footer {
+  background-color: $secondary-color;
+  .footer-inner {
+    .content__box {
+      margin: 0 auto;
+    }
+
+    .content__top {
+      padding: 2rem;
+      gap: 9vw;
+    }
+
+    .tit {
+      padding-bottom: 0.5rem;
+      letter-spacing: 1px;
+      color: $cream5-font-color;
+    }
+
+    .contact-info,
+    .info-list {
+      color: $footer-sub-font-color;
+      font-size: 0.85rem;
+    }
+    .guide {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.5rem;
+      flex-wrap: nowrap;
+      cursor: pointer;
+
+      p {
+        white-space: nowrap;
+      }
+    }
+
+    .follow-us {
+      .follow-info ul {
+        gap: 1rem;
+
+        li {
+          &.insta {
+            width: 1.3rem;
+            height: 1.3rem;
+          }
+          &.youtube {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
+          &.kakaotalk {
+            width: 1.3rem;
+            height: 1.3rem;
+          }
+
+          &.naverCafe {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: -0.6rem;
+          }
+        }
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: 0.05px;
+      background-color: $tag-font-color;
+    }
+    .content__bottom {
+      padding: 1rem;
+
+      .copyright {
+        color: $sub-text-font-color;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+    }
+  }
+}
+#mobile-footer {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #pc-footer {
+    display: none;
+  }
+  #mobile-footer {
+    display: flex;
+    background-color: $secondary-color;
+    .footer-inner {
+      .content__box {
+        margin: 0 auto;
+        letter-spacing: 1px;
+      }
+      .content__top {
+        flex-direction: row;
+        padding: 1.3rem;
+        gap: 2rem;
+      }
+      .contact-info,
+      .guide {
+        color: $footer-sub-font-color;
+        font-size: 0.85rem;
+        white-space: nowrap;
+      }
+      .line {
+        width: 100%;
+        height: 0.05px;
+        background-color: $tag-font-color;
+      }
+      .follow-info ul {
+        gap: 1rem;
+        padding-bottom: 0.5rem;
+        letter-spacing: 1px;
+        color: $cream5-font-color;
+
+        li {
+          &.insta {
+            width: 1.3rem;
+            height: 1.3rem;
+          }
+          &.youtube {
+            width: 1.5rem;
+            height: 1.5rem;
+          }
+
+          &.kakaotalk {
+            width: 1.3rem;
+            height: 1.3rem;
+          }
+
+          &.naverCafe {
+            width: 1.8rem;
+            height: 1.8rem;
+            margin-left: -0.4rem;
+          }
+        }
+      }
+      .content__bottom {
+        padding: 1rem;
+      }
+      .copyright {
+        color: $cream5-font-color;
+        font-size: 0.8rem;
+        text-align: center;
+        font-weight: 300;
+      }
+    }
+  }
+}

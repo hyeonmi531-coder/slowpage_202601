@@ -1,0 +1,278 @@
+// ============================================
+// Header - 헤더 스타일
+// ============================================
+
+@use "variables" as *;
+
+// pc 헤더
+#header-top {
+  top: 0;
+  inset-inline: 0;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+
+  /* 섹션7 진입 시 사라질 클래스 */
+  &.is-hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-wrap {
+    min-width: 300px;
+    margin: 0 auto;
+
+    /* 최상단 탑 라인배너 */
+    .top-line-banner {
+      position: relative;
+      height: 1.8rem;
+      background-color: $primary-color;
+      overflow: hidden;
+
+      .banner-text {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        color: #fefdfc;
+        font-size: 12px;
+        opacity: 0;
+        animation: fadeLoop 6.2s ease-in-out infinite;
+
+        .highlight {
+          color: $topLine-font-color;
+        }
+      }
+      .text-2 {
+        animation-delay: 3.1s;
+      }
+      @keyframes fadeLoop {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 1;
+        } /* 서서히 나타남 */
+        45% {
+          opacity: 1;
+        } /* 유지 */
+        60% {
+          opacity: 0;
+        } /* 서서히 사라짐 */
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+
+    // 헤더,로고,GNB,util
+    .header-top-bar {
+      height: auto; // 자동으로 공간 내려주기
+      min-height: 9vw;
+      background-color: transparent; // 기본투명
+
+      &.is-active {
+        background-color: rgba(235, 228, 220, 0.05); /* 바뀔 불투명 배경 */
+        backdrop-filter: blur(5px); /* 유리창 효과 */
+        -webkit-backdrop-filter: blur(5px);
+        border-bottom: 1px solid rgba(97, 66, 49, 0.08);
+        box-shadow: 0 4px 20px rgba(97, 66, 49, 0.05);
+      }
+
+      .con {
+        padding-inline: 4vw 11rem;
+
+        .header-top-bar__left {
+          .logo-box {
+            text-align: left;
+            gap: 1rem;
+
+            .logo {
+              a {
+                font-size: $logo-font-size;
+                white-space: nowrap;
+              }
+            }
+
+            .bookmark {
+              transform: translateY(-1.5vw);
+
+              img {
+                height: 8vw;
+              }
+            }
+          }
+        }
+        .header-top-bar__right {
+          .util-box {
+            width: 80%;
+            padding: 0.3rem 1rem;
+            border: 1px solid #5a5858;
+            border-radius: 40px;
+            gap: 1.5rem;
+            transform: translateY(-1.5vw);
+
+            a {
+              display: flex;
+              color: #5a5858;
+
+              img {
+                width: $util-icon-size;
+              }
+            }
+
+            a:hover img {
+              filter: invert(45%) sepia(5%) saturate(400%) hue-rotate(0deg)
+                brightness(95%) contrast(92%);
+            }
+          }
+        }
+
+        // 메뉴
+        .menu-box {
+          transform: translateY(-2vw);
+          .menu-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+
+            .menu-list {
+              gap: 4vw;
+              white-space: nowrap;
+
+              li a {
+                font-size: $menu-font-size;
+                color: $title-font-color-default;
+                font-weight: 500;
+                transition: color 0.3s;
+                letter-spacing: 2;
+
+                &:hover {
+                  color: #747171;
+                }
+              }
+              .menu-list__item {
+                letter-spacing: -0.02rem;
+              }
+
+              .item-tag {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mobile-header-top-bar {
+      display: none;
+    }
+
+    // 모바일 600px이하일때
+    @media (max-width: 601px) {
+      .header-wrap {
+        .header-top-bar {
+          display: none;
+        }
+        // 모바일 헤더
+        .mobile-header-top-bar {
+          display: block;
+          height: auto;
+          background-color: transparent;
+          transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+
+          &.is-active {
+            background-color: rgba(235, 228, 220, 0.05);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 20px rgba(97, 66, 49, 0.05);
+            border-bottom: 1px solid rgba(97, 66, 49, 0.08);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            z-index: 50;
+          }
+
+          &.is-hidden {
+            transform: translateY(-100%);
+            opacity: 0;
+            pointer-events: none;
+          }
+
+          .con {
+            padding-inline: 4.7vw;
+
+            .top-bar {
+              display: grid;
+              grid-template-columns: 1fr auto 1fr;
+              align-items: center;
+              min-height: 10vw;
+              margin-top: 0.5rem;
+            }
+
+            .header-top-bar__left {
+              justify-self: start;
+            }
+            .header-top-bar__mid {
+              justify-self: center;
+
+              .logo-box {
+                gap: 1rem;
+
+                .logo {
+                  a {
+                    font-size: $mobile-logo-font-size;
+                    white-space: nowrap;
+                  }
+                }
+              }
+            }
+            .header-top-bar__right {
+              justify-self: end;
+
+              .util-box {
+                width: 100%;
+                gap: 0.7rem;
+
+                a {
+                  display: flex;
+                  color: #5a5858;
+
+                  img {
+                    width: $util-icon-size;
+                  }
+                }
+              }
+            }
+
+            // 메뉴리스트
+            .menu-box {
+              padding-top: 0.4rem;
+
+              .menu-inner {
+                min-width: 300px;
+                margin: 0 auto;
+
+                .menu-list {
+                  gap: 3vw;
+                  flex-wrap: wrap;
+
+                  li a {
+                    font-size: $menu-font-size;
+                    color: $title-font-color-default;
+                    font-weight: 500;
+                    letter-spacing: 2;
+                  }
+                  .menu-list__item {
+                    letter-spacing: -0.02rem;
+                  }
+
+                  .item-tag {
+                    font-weight: 700;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

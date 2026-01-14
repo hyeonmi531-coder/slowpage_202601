@@ -1,0 +1,71 @@
+// ============================================
+// Variables - 변수 정의
+// ============================================
+
+$mobile-header-height: calc(10vw + 20px);
+$logo-font-size: 5vw;
+$section-header-bottom: 2rem;
+$mobileSection-header-bottom: 1rem;
+$title-font-size-default: clamp(1.3rem, 3.5vw, 2.5rem);
+$text-font-size-default: clamp(0.95rem, 2.2vw, 1.2rem);
+$month-font-size: clamp(0.75rem, 1.5vw, 1rem);
+$sub-font-size: 0.8rem;
+$mobile-sub-font-size: 0.6rem;
+$util-icon-size: clamp(1.4rem, 2.5vw, 2rem);
+$menu-font-size: clamp(0.95rem, 1.2vw, 1.2rem);
+$author-font-size: 0.75rem;
+$book-info-size: clamp(0.7rem, 1.6vw, 1rem);
+$button-font-size: clamp(0.6rem, 1.6vw, 0.85rem);
+
+$mobile-logo-font-size: 8.7vw;
+$mobile-text-font-size: 3.5vw;
+
+// 섹션5
+$card-width-default: 4.75rem;
+$card-height-default: clamp(280px, 32vw, 450px);
+$card-width-hover: 18.25rem;
+$card-width-open: 18.25rem;
+$card-height-hover: clamp(280px, 32vw, 450px);
+$transition-speed: 0.35s;
+
+$title-color: #fff;
+$book-info-color: #f2f2f2;
+$title-font-color-default: #21120a;
+$text-font-color-default: #747171;
+$sub-text-font-color: #8e8b8b;
+$tag-font-color: #8e8b8b;
+$tag-button-color: #d9d8d8;
+$button-font-color-default: #81685a;
+$memo-title-color: #21120a;
+$memo-text-color: #5a5858;
+$large-button-color: #5a5858;
+$primary-color: #614231;
+$secondary-color: #21120a;
+$marquee-font-color: #b29580;
+$cream1-font-color: #f7ebdf;
+$gray-box: #d9d8d8;
+$cream5-font-color: #fefdfc;
+$subscription-book-name-color: #3c3b3b;
+$month-font-color: #a08e83;
+$topLine-font-color: #f1d8be;
+$script-font-color: #21120a;
+$footer-sub-font-color: #a08e83;
+
+// 섹션7
+$best-bg-main: #614231;
+$best-card-start: #a68b7c;
+$best-card-end: #7d5f4f;
+$best-text-light: #fdfaf5;
+$best-text-dark: #432b1f;
+$best-card-width: clamp(160px, 17vw, 380px);
+$best-min-width: 280px;
+$best-title-size: clamp(2.5rem, 8vw, 4.5rem);
+$best-unit-size: clamp(0.875rem, 1.5vw, 1.25rem);
+$best-desc-size: clamp(1rem, 2vw, 1.5rem);
+$best-date-size: clamp(0.75rem, 1vw, 0.9rem);
+
+// 섹션8
+$lank-font-size: clamp(12px, 1.2vw, 14px);
+
+// 섹션9
+$nickName-font-size: clamp(0.6rem, 1.6vw, 0.85rem);

@@ -1,0 +1,29 @@
+// ============================================
+// Common - 공통 스타일
+// ============================================
+
+.font-Nothing-You-Could-Do {
+  font-family: "Nothing You Could Do";
+}
+
+html {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  overflow-x: hidden;
+
+  // 배경 설정 (PC 기본)
+  background-image: url(https://../assets/images/bg.jpg);
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+
+  // body 별도로 분리
+  @media (max-width: 601px) {
+    background-size: 600px auto;
+  }
+}
