@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:wght@300..800&display=swap"
       rel="stylesheet"
     />
     <!-- gasp 불러오기 -->
@@ -41,1105 +41,1503 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-    <script defer src="assets/js/common.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <script defer src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <!-- site-wrap : 전체 사이트를 감싸는 용도 -->
+    <div class="site-wrap">
+      <!-- 헤더 시작	 -->
+      <header id="header-top" class="fixed flex w-full z-[40]">
+        <div class="header-wrap w-full h-full">
+          <!-- 최상단 탑배너 시작 -->
+          <div class="top-line-banner">
+            <a href="#" class="banner-text text-1"
+              ><span class="highlight">매월 소중한 책</span>&nbsp;정기구독하기 ·
+              무료배송</a
+            >
+            <a href="#" class="banner-text text-2">오늘의 밑줄 보러가기</a>
+          </div>
+          <!-- pc헤더-->
+          <div class="header-top-bar flex">
+            <div class="con flex flex-col w-full h-full">
+              <div class="top-bar flex justify-between items-center w-full">
+                <div class="header-top-bar__left flex items-center">
+                  <div class="logo-box flex items-center h-full">
+                    <h1 class="logo font-Nothing-You-Could-Do">
+                      <a href="#">slow page'</a>
+                    </h1>
+                    <div class="bookmark">
+                      <img src="./assets/images/bookmark_1.png" alt="북마크" />
+                    </div>
+                  </div>
+                </div>
+                <div class="header-top-bar__right flex items-center">
+                  <div class="util-box flex">
+                    <a href="#" class="cart">
+                      <img src="./assets/icon/cart.png" alt="카트" />
+                    </a>
+                    <a href="#" class="bell">
+                      <img src="./assets/icon/bell.png" alt="벨" />
+                    </a>
+                    <a href="#" class="search">
+                      <img src="./assets/icon/search.png" alt="돋보기" />
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-	<!-- site-wrap : 전체 사이트를 감싸는 용도 -->
-<div class="site-wrap">	
-    	<!-- 헤더 시작	 -->
-		<header id="header-top" class="fixed flex w-full z-[40]">
-		<div class="header-wrap w-full h-full">
-			<!-- 최상단 탑배너 시작 -->
-			<div class="top-line-banner">
-				<a href="#" class="banner-text text-1"><span class="highlight">매월 소중한 책</span>&nbsp;정기구독하기 · 무료배송</a>
-				<a href="#" class="banner-text text-2">오늘의 밑줄 보러가기</a>
-			</div>
-			<!-- pc헤더-->
-			<div class="header-top-bar flex">
-				<div class="con flex flex-col w-full h-full">
-					<div class="top-bar flex justify-between items-center w-full">
+              <!-- GNB 메뉴	-->
+              <nav class="menu-box">
+                <div class="menu-inner">
+                  <ul class="menu-list flex items-center justify-end">
+                    <li><a href="#" class="menu-list__item">About</a></li>
+                    <li><a href="#" class="menu-list__item">News-letter</a></li>
+                    <li><a href="#" class="menu-list__item">Community</a></li>
+                    <li>
+                      <a href="#" class="menu-list__item item-tag">#Tag</a>
+                    </li>
+                    <li><a href="#" class="menu-list__item">Shop</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- 모바일헤더	 -->
+          <div class="mobile-header-top-bar fixed w-full">
+            <div class="con block w-full h-full">
+              <div class="top-bar w-full">
+                <div class="header-top-bar__left">
+                  <a href="#" class="hamburger">
+                    <img src="./assets/icon/burger-2.png" alt="햄버거" />
+                  </a>
+                </div>
+                <div class="header-top-bar__mid flex items-center">
+                  <div class="logo-box flex items-center justify-center h-full">
+                    <h1 class="logo font-Nothing-You-Could-Do">
+                      <a href="#">slow page'</a>
+                    </h1>
+                  </div>
+                </div>
+                <div class="header-top-bar__right flex items-center">
+                  <div class="util-box flex">
+                    <a href="#" class="bell">
+                      <img src="./assets/icon/bell.png" alt="벨" />
+                    </a>
+                    <a href="#" class="search">
+                      <img src="./assets/icon/search.png" alt="돋보기" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <nav class="menu-box">
+                <div class="menu-inner flex w-full">
+                  <ul class="menu-list flex justify-center w-full">
+                    <li><a href="#" class="menu-list__item">About</a></li>
+                    <li><a href="#" class="menu-list__item">News-letter</a></li>
+                    <li><a href="#" class="menu-list__item">Community</a></li>
+                    <li>
+                      <a href="#" class="menu-list__item item-tag">#Tag</a>
+                    </li>
+                    <li><a href="#" class="menu-list__item">Shop</a></li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 헤더 끝	 -->
 
-						<div class="header-top-bar__left flex items-center">
-							<div class="logo-box flex items-center h-full">
-								<h1 class="logo font-Nothing-You-Could-Do">
-									<a href="#">slow page'</a>
-								</h1>
-								<div class="bookmark">
-									<img src="./assets/images/bookmark_1.png" alt="북마크">
-								</div>
-							</div>
-						</div>
-						<div class="header-top-bar__right flex items-center">
-							<div class="util-box flex">
-								<a href="#" class="cart">
-									<img src="./assets/icon/cart.png
-									
-									" alt="카트" />
-								</a>
-								<a href="#" class="bell">
-									<img src="./assets/icon/bell.png" alt="벨" />
-								</a>
-								<a href="#" class="search">
-									<img src="./assets/icon/search.png" alt="돋보기" />
-								</a>
-							</div>
+      <!-- 메인섹션-->
+      <main class="main-wrap">
+        <div class="content">
+          <!-- section-1: 슬라이드-->
+          <section class="section-1">
+            <div class="con flex justify-center">
+              <div class="swiper flex w-full h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide flex items-center justify-center">
+                    <a href="#">
+                      <img src="./assets/images/main3.webp" alt="플라워 컬러링"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/main1.webp" alt="랜선 팬사인회"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/main5.webp" alt="위즈덤하우스"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img
+                        src="./assets/images/main2.webp"
+                        alt="나나올리브나나올리브"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/main4.webp" alt="트롤스페이퍼"
+                    /></a>
+                  </div>
+                </div>
 
-						</div>
-					</div>
+                <!--  navigation buttons -->
+                <div class="fraction-nav">
+                  <div class="fraction-box">
+                    <button class="swiper-button-prev swiper-button"></button>
+                    <div class="swiper-pagination"></div>
+                    <button class="swiper-button-next swiper-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- 모바일 section-1: 슬라이드 -->
+          <div class="mobile-section-1">
+            <div class="con flex justify-center">
+              <div class="swiper flex w-full h-full">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide flex items-center justify-center">
+                    <a href="#">
+                      <img src="./assets/images/m-main3.jpg" alt="위즈덤하우스"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/m-main4.jpg" alt="플라워"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/m-main2.jpg" alt="책고르기"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/m-main5.jpg" alt="랜선팬사인회"
+                    /></a>
+                  </div>
+                  <div class="swiper-slide">
+                    <a href="#">
+                      <img src="./assets/images/m-main1.jpg" alt="트롤스페이퍼"
+                    /></a>
+                  </div>
+                </div>
+                <!--  모바일 navigation buttons -->
+                <div class="fraction-nav">
+                  <div class="fraction-box">
+                    <button class="swiper-button-prev swiper-button"></button>
+                    <div class="swiper-pagination"></div>
+                    <button class="swiper-button-next swiper-button"></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-					<!-- GNB 메뉴	-->
-					<nav class="menu-box">
-						<div class="menu-inner">
-							<ul class="menu-list flex items-center justify-end">
-								<li><a href="#" class="menu-list__item">About</a></li>
-								<li><a href="#" class="menu-list__item">News-letter</a></li>
-								<li><a href="#" class="menu-list__item">Community</a></li>
-								<li><a href="#" class="menu-list__item item-tag">#Tag</a></li>
-								<li><a href="#" class="menu-list__item">Shop</a></li>
-							</ul>
-						</div>
+          <!-- section-2: marquee(캐러셀) -->
+          <section
+            class="section-2 marquee_wrapper flex flex-col items-center w-full"
+          >
+            <div class="marquee flex items-center justify-center w-full h-full">
+              <div class="text-background flex items-center inset-0">
+                <div class="text-line flex">
+                  <span
+                    >A slow page is a space where you take a break and turn a
+                    page of your leisure time with a
+                    book&nbsp;&nbsp;&nbsp;</span
+                  >
+                  <span
+                    >A slow page is a space where you take a break and turn a
+                    page of your leisure time with a
+                    book&nbsp;&nbsp;&nbsp;</span
+                  >
+                  <span
+                    >A slow page is a space where you take a break and turn a
+                    page of your leisure time with a
+                    book&nbsp;&nbsp;&nbsp;</span
+                  >
+                </div>
+              </div>
 
-					</nav>
-				</div>
-			</div>
-			<!-- 모바일헤더	 -->
-			<div class="mobile-header-top-bar fixed w-full">
-				<div class="con block w-full h-full">
-					<div class="top-bar w-full">
-						<div class="header-top-bar__left">
-							<a href="#" class="hamburger">
-								<img src="./assets/icon/burger-2.png" alt="햄버거">
-							</a>
-						</div>
-						<div class="header-top-bar__mid flex items-center">
-							<div class="logo-box flex items-center justify-center h-full">
-								<h1 class="logo font-Nothing-You-Could-Do">
-									<a href="#">slow page'</a>
-								</h1>
-							</div>
-						</div>
-						<div class="header-top-bar__right flex items-center">
-							<div class="util-box flex">
-								<a href="#" class="bell">
-									<img src="./assets/icon/bell.png" alt="벨" />
-								</a>
-								<a href="#" class="search">
-									<img src="./assets/icon/search.png" alt="돋보기" />
-								</a>
-							</div>
+              <div class="video-box flex mx-[auto]">
+                <div class="video-container justify-center">
+                  <video autoplay loop muted playsinline class="w-full h-full">
+                    <source
+                      src="./assets/video/section2-book-small.mp4"
+                      type="video/mp4"
+                    />
+                  </video>
+                </div>
+              </div>
+            </div>
+          </section>
 
-						</div>
-					</div>
-					<nav class="menu-box">
-						<div class="menu-inner flex w-full">
-							<ul class="menu-list flex justify-center w-full">
-								<li><a href="#" class="menu-list__item">About</a></li>
-								<li><a href="#" class="menu-list__item">News-letter</a></li>
-								<li><a href="#" class="menu-list__item">Community</a></li>
-								<li><a href="#" class="menu-list__item item-tag">#Tag</a></li>
-								<li><a href="#" class="menu-list__item">Shop</a></li>
-							</ul>
-						</div>
+          <!-- section-3: 월간구독북 -->
+          <section
+            class="section-3 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+          >
+            <div class="subscription-container">
+              <article class="subscription flex flex-col items-center">
+                <div
+                  class="subscription__header max-w-[1602px] flex justify-between items-end w-full mx-auto"
+                >
+                  <div class="tit-area flex flex-col items-start justify-start">
+                    <div class="subscription__title flex">
+                      <p>월간 구독</p>
+                      <p class="light-text">북's</p>
+                    </div>
+                    <div class="subscription__text">
+                      <p>월별 구독자를 위한 지난 큐레이션 책 소개</p>
+                    </div>
+                  </div>
+                  <button
+                    class="subscription__button flex items-center justify-center"
+                  >
+                    <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                  </button>
+                </div>
+                <div
+                  class="subscription__content flex items-center max-w-[1602px] w-full justify-center"
+                >
+                  <div
+                    class="monthly-area grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-y-7 lg:gap-x-2"
+                  >
+                    <!-- 좌측아이템 -->
+                    <div class="attention-item flex flex-col items-center">
+                      <div
+                        class="attention-con flex flex-col justify-between w-full h-full"
+                      >
+                        <div
+                          class="attention-top flex items-center justify-between w-full"
+                        >
+                          <div class="brand">Slow page</div>
+                          <span
+                            ><i class="fa-solid fa-arrow-right-long"></i
+                          ></span>
+                        </div>
+                        <div
+                          class="attention-book flex items-center justify-center"
+                        >
+                          <a href="#">
+                            <img
+                              src="./assets/images/white-out.png"
+                              alt="화이트 아웃"
+                            />
+                          </a>
+                          <p class="text">
+                            '나'라는 인간의 중심을 잡도록 도와주는 책
+                          </p>
+                        </div>
+                        <div
+                          class="attention-box flex items-center justify-center w-full"
+                        >
+                          <p class="month">12월</p>
+                          <div class="book-info">
+                            <p class="book-name">White out</p>
+                            <p class="attention-author">김로로</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
 
-					</nav>
-				</div>
-			</div>
+                    <!-- 우측아이템	: 4개 book영역-->
+                    <div class="sub-item grid grid-cols-2">
+                      <div class="sub-book flex flex-col items-center">
+                        <a href="#" data-aos="fade-up">
+                          <img
+                            src="./assets/images/winter.webp"
+                            alt="겨울특집"
+                          />
+                        </a>
+                        <div class="text-inner">
+                          <div
+                            class="text"
+                            data-aos="fade-up"
+                            data-aos-duration="700"
+                            data-aos-delay="120"
+                          >
+                            "겨울을 보는 시선"
+                          </div>
+                        </div>
+                        <div
+                          class="sub-box flex items-center justify-center w-full"
+                        >
+                          <div class="month">11월</div>
+                          <div class="book-info">
+                            <div class="book-name">겨울특집</div>
+                            <div class="author">&nbsp;마사진영</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sub-book flex flex-col items-center">
+                        <a href="#" data-aos="fade-up">
+                          <img
+                            src="./assets/images/budybudy.webp"
+                            alt="버디버디"
+                          />
+                        </a>
+                        <div class="text-inner">
+                          <div
+                            class="text"
+                            data-aos="fade-up"
+                            data-aos-delay="120"
+                          >
+                            "당신 마음속 단짝"
+                          </div>
+                        </div>
+                        <div
+                          class="sub-box flex items-center justify-center w-full"
+                        >
+                          <div class="month">10월</div>
+                          <div class="book-info flex-col">
+                            <div class="book-name">Buddy Buddy</div>
+                            <div class="author">&nbsp;마사진영</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sub-book flex flex-col items-center">
+                        <a href="#" data-aos="fade-up">
+                          <img src="./assets/images/achim.webp" alt="아침" />
+                        </a>
+                        <div class="text-inner">
+                          <div
+                            class="text"
+                            data-aos="fade-up"
+                            data-aos-delay="120"
+                          >
+                            "경계없는 세상보기"
+                          </div>
+                        </div>
 
-		</div>
-	</header>
-	<!-- 헤더 끝	 -->
+                        <div
+                          class="sub-box flex items-center justify-center w-full"
+                        >
+                          <div class="month">9월</div>
+                          <div class="book-info flex-col">
+                            <div class="book-name">Achim</div>
+                            <div class="author">&nbsp;Achim</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="sub-book flex flex-col items-center">
+                        <a href="#" data-aos="fade-up">
+                          <img
+                            src="./assets/images/killing.webp"
+                            alt="킬링 앤 다잉"
+                          />
+                        </a>
+                        <div class="text-inner">
+                          <div
+                            class="text"
+                            data-aos="fade-up"
+                            data-aos-delay="120"
+                          >
+                            "감정의 밀실 경험"
+                          </div>
+                        </div>
+                        <div
+                          class="sub-box flex items-center justify-center w-full"
+                        >
+                          <div class="month">8월</div>
+                          <div class="book-info flex-col">
+                            <div class="book-name">킬링 앤 다잉</div>
+                            <div class="author">&nbsp;에이드리언 토미네</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
 
- <!-- 메인섹션-->
-	<main class="main-wrap">
-		<div class="content">
+          <!-- section-4: 지금인기태그 -->
+          <section
+            class="section-4 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+          >
+            <div class="tag-container">
+              <div class="tag flex flex-col">
+                <div
+                  class="tag__header flex max-w-[1602px] flex justify-between items-end w-full mx-auto"
+                >
+                  <div class="tag__left">
+                    <div class="tag__title flex">
+                      <p>지금 인기</p>
+                      <p class="light-text">#태그</p>
+                    </div>
+                    <div class="tag__text">
+                      <p>내 마음이 말하는 맞춤 키워드 검색</p>
+                    </div>
+                  </div>
+                  <div class="tag__right">
+                    <button
+                      class="tag__button flex items-center justify-center"
+                    >
+                      <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="tag__content flex justify-between">
+                  <div class="tag-main flex flex-col">
+                    <div class="tag-small flex">
+                      <div class="tag-1">
+                        <button class="small-button">
+                          <span>#생활속발견</span>
+                        </button>
+                      </div>
+                      <div class="tag-2">
+                        <button class="small-button">
+                          <span>#화장실에서 보고 싶은 책</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tag-img"></div>
+                    <div class="tag-book-info">
+                      <p class="book-title">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Science of the Secondary: TOILET PAPER · ATELIER HOKO
+                      </p>
+                    </div>
+                  </div>
+                  <div class="tag-box flex flex-col">
+                    <div class="tag-small flex">
+                      <div class="tag-3">
+                        <button class="small-button">
+                          <span>#12월에 보고싶은 책</span>
+                        </button>
+                      </div>
+                      <div class="tag-4">
+                        <button class="small-button">
+                          <span>#우울할 때</span>
+                        </button>
+                      </div>
+                      <div class="tag-5">
+                        <button class="small-button">
+                          <span>#감성시집</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tag-large flex flex-col">
+                      <div class="large-button">
+                        <button class="large-text">
+                          <span class="typing-line"
+                            >#화창한 날 소풍같은 책</span
+                          >
+                          <span class="plus">+</span>
+                        </button>
 
-			<!-- section-1: 슬라이드-->
-			<section class="section-1">
-				<div class="con flex justify-center">
-					<div class="swiper flex w-full h-full">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide flex items-center justify-center">
-								<a href="#">
-									<img src="./assets/images/main3.webp" alt="플라워 컬러링"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/main1.webp" alt="랜선 팬사인회"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/main5.webp" alt="위즈덤하우스"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/main2.webp" alt="나나올리브나나올리브"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/main4.webp" alt="트롤스페이퍼"></a>
-							</div>
-						</div>
+                        <!-- 펼쳐질 영역	-->
+                        <div class="accordion-content">
+                          <div class="inner-wrapper">
+                            <div class="book-thumb">
+                              <img
+                                src="./assets/images/picnic1.jpg"
+                                alt="화창한 소풍 추천책1"
+                              />
+                              <img
+                                src="./assets/images/picnic2.png"
+                                alt="화창한 소풍 추천책2"
+                              />
+                              <img
+                                src="./assets/images/picnic3.png"
+                                alt="화창한 소풍 추천책3"
+                              />
+                              <img
+                                src="./assets/images/picnic4.jpg"
+                                alt="화창한 소풍 추천책4"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="large-button">
+                        <button class="large-text">
+                          <span class="typing-line">#비 올때 보고 싶은 책</span>
+                          <span class="plus">+</span>
+                        </button>
 
-						<!--  navigation buttons -->
-						<div class="fraction-nav">
-							<div class="fraction-box">
-								<button class="swiper-button-prev swiper-button"></button>
-								<div class="swiper-pagination"></div>
-								<button class="swiper-button-next swiper-button"></button>
-							</div>
-						</div>
+                        <!-- 펼쳐질 영역	-->
+                        <div class="accordion-content">
+                          <div class="inner-wrapper">
+                            <div class="book-thumb">
+                              <img
+                                src="./assets/images/rain1.jpg"
+                                alt="비 올때 추천책1"
+                              />
+                              <img
+                                src="./assets/images/rain2.jpg"
+                                alt="비 올때 추천책2"
+                              />
+                              <img
+                                src="./assets/images/rain3.jpg"
+                                alt="비 올때 추천책3"
+                              />
+                              <img
+                                src="./assets/images/rain4.png"
+                                alt="비 올때 추천책4"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="large-button">
+                        <button class="large-text">
+                          <span class="typing-line">#마음 따뜻하게 해줄래</span>
+                          <span class="plus">+</span>
+                        </button>
+                        <!-- 펼쳐질 영역	-->
+                        <div class="accordion-content">
+                          <div class="inner-wrapper">
+                            <div class="book-thumb">
+                              <img
+                                src="./assets/images/heart1.jpg"
+                                alt="마음따뜻 추천책1"
+                              />
+                              <img
+                                src="./assets/images/heart2.png"
+                                alt="마음따뜻 추천책2"
+                              />
+                              <img
+                                src="./assets/images/heart3.png"
+                                alt="마음따뜻 추천책3"
+                              />
+                              <img
+                                src="./assets/images/heart4.png"
+                                alt="마음따뜻 추천책4"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="large-button">
+                        <button class="large-text">
+                          <span class="typing-line">#떠나고 싶을 때</span>
+                          <span class="plus">+</span>
+                        </button>
+                        <!-- 펼쳐질 영역	-->
+                        <div class="accordion-content">
+                          <div class="inner-wrapper">
+                            <div class="book-thumb">
+                              <img
+                                src="./assets/images/trip1.png"
+                                alt="떠나고 싶을때 추천책1"
+                              />
+                              <img
+                                src="./assets/images/trip2.jpg"
+                                alt="떠나고 싶을때 추천책2"
+                              />
+                              <img
+                                src="./assets/images/trip3.png"
+                                alt="떠나고 싶을때 추천책3"
+                              />
+                              <img
+                                src="./assets/images/trip4.jpg"
+                                alt="떠나고 싶을때 추천책4"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-					</div>
-				</div>
-			</section>
-			<!-- 모바일 section-1: 슬라이드 -->
-			<div class="mobile-section-1">
-				<div class="con flex justify-center">
-					<div class="swiper flex w-full h-full">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide flex items-center justify-center">
-								<a href="#">
-									<img src="./assets/images/m-main3.jpg" alt="위즈덤하우스"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/m-main4.jpg" alt="플라워"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/m-main2.jpg" alt="책고르기"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/m-main5.jpg" alt="랜선팬사인회"></a>
-							</div>
-							<div class="swiper-slide">
-								<a href="#">
-									<img src="./assets/images/m-main1.jpg" alt="트롤스페이퍼"></a>
-							</div>
-						</div>
-						<!--  모바일 navigation buttons -->
-						<div class="fraction-nav">
-							<div class="fraction-box">
-								<button class="swiper-button-prev swiper-button"></button>
-								<div class="swiper-pagination"></div>
-								<button class="swiper-button-next swiper-button"></button>
-							</div>
-						</div>
-					</div>
-				</div>
+                <!-- 띠배너 -->
+                <div
+                  class="band-banner"
+                  data-aos="fade"
+                  data-aos-anchor-placement="top-bottom"
+                  data-aos-once="true"
+                >
+                  <div class="band-content flex items-center justify-between">
+                    <div class="band-text">
+                      <h3 class="band-title">소설 보다: 겨울 2026</h3>
+                      <p class="band-des">
+                        1년 한정판매 소설보다 시리즈 출간! 겨울의 소설적 풍경을
+                        그려내다
+                      </p>
+                    </div>
+                    <div class="band-book flex self-end" data-aos="fade-up">
+                      <img
+                        src="./assets/images/line-banner_book.png"
+                        alt="띠배너 북이미지"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-			</div>
+          <!-- section-5: News -->
+          <section
+            class="section-5 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+          >
+            <div class="news-container">
+              <div class="news flex flex-col">
+                <div
+                  class="news__header flex max-w-[1602px] flex justify-between items-end w-full mx-auto"
+                >
+                  <div class="news__left">
+                    <h1 class="news__title flex">
+                      <p>News</p>
+                    </h1>
+                    <div class="news__text">
+                      <p>새로나온 책과 요즘 어떤 소식</p>
+                    </div>
+                  </div>
+                  <div class="news__right">
+                    <button
+                      class="news__button flex items-center justify-center"
+                    >
+                      <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="news__content flex">
+                  <div class="book-area">
+                    <div class="book-card book-card-default">
+                      <img
+                        src="./assets/images/nishi-shuku.jpg"
+                        class="book-img"
+                        alt="니시슈쿠"
+                      />
+                      <div class="book-title flex flex-col">
+                        <h3></h3>
+                      </div>
+                      <div class="book-info">
+                        <p>Nishi Shuku</p>
+                      </div>
+                    </div>
 
-			<!-- section-2: marquee(캐러셀) -->
-			<section class="section-2 marquee_wrapper flex flex-col items-center w-full">
-				<div class="marquee flex items-center justify-center w-full h-full">
-					<div class="text-background flex items-center inset-0">
-						<div class="text-line flex ">
-							<span>A slow page is a space where you take a break and turn a page of your leisure time with a book&nbsp;&nbsp;&nbsp;</span>
-							<span>A slow page is a space where you take a break and turn a page of your leisure time with a book&nbsp;&nbsp;&nbsp;</span>
-							<span>A slow page is a space where you take a break and turn a page of your leisure time with a book&nbsp;&nbsp;&nbsp;</span>
-						</div>
-					</div>
+                    <div class="book-card flex">
+                      <img
+                        src="./assets/images/berlin.png"
+                        class="book-img"
+                        alt="베를린편지"
+                      />
+                      <div class="book-title">
+                        <h3>berlin</h3>
+                      </div>
+                      <div class="book-info">
+                        <p>briefe</p>
+                        <p>박진</p>
+                      </div>
+                    </div>
 
-					<div class="video-box flex mx-[auto]">
-						<div class="video-container justify-center">
-							<video autoplay loop muted playsinline class="w-full h-full">
-								<source src="./assets/video/section2-book-small.mp4" type="video/mp4">
-							</video>
-						</div>
-					</div>
-				</div>
-			</section>
+                    <div class="book-card">
+                      <img
+                        src="./assets/images/heart4.png"
+                        class="book-img"
+                        alt="Society"
+                      />
+                      <div class="book-title">
+                        <h3>Society</h3>
+                      </div>
+                      <div class="book-info">
+                        <p>건축사사무소 SoA</p>
+                      </div>
+                    </div>
 
-			<!-- section-3: 월간구독북 -->
-			<section class="section-3 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-				<div class="subscription-container">
-					<article class="subscription flex flex-col items-center">
-						<div class="subscription__header max-w-[1602px] flex justify-between items-end w-full mx-auto">
-							<div class="tit-area flex flex-col items-start justify-start">
-								<div class="subscription__title flex">
-									<p>월간 구독</p>
-									<p class="light-text">북's</p>
-								</div>
-								<div class="subscription__text">
-									<p>월별 구독자를 위한 지난 큐레이션 책 소개</p>
-								</div>
-							</div>
-							<button class="subscription__button flex items-center justify-center">
+                    <div class="book-card">
+                      <img
+                        src="./assets/images/trip2.jpg"
+                        class="book-img"
+                        alt="pudding"
+                      />
+                      <div class="book-title">
+                        <h3>사과여행</h3>
+                      </div>
+                      <div class="book-info">
+                        <p>신현림</p>
+                      </div>
+                    </div>
+                  </div>
+                  <article class="news-board swiper newsSwiper">
+                    <div class="swiper-wrapper">
+                      <div
+                        class="swiper-slide board flex flex-col items-center justify-center"
+                      >
+                        <div class="board-photo">
+                          <img src="./assets/images/mypower.png" alt="참여" />
+                        </div>
+                        <div class="board-text">
+                          <p>[참여] 힘은 무엇일까요?</p>
+                          <p>
+                            그림 조각을 가지고 나의 힘을 발휘 할 수 있는 관계를
+                            설정
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide board flex flex-col items-center justify-center"
+                      >
+                        <div class="board-photo">
+                          <img
+                            src="./assets/images/deepnight.jpg"
+                            alt="북토크"
+                          />
+                        </div>
+                        <div class="board-text">
+                          <p>[북토크] 일몰과 일출사이에</p>
+                          <p>
+                            푹신한 밤, 아득한 밤, 외로운 밤, 무수한 밤, 감당하는
+                            밤들의 채움
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide board flex flex-col items-center justify-center"
+                      >
+                        <div class="board-photo">
+                          <img src="./assets/images/mypower.png" alt="참여" />
+                        </div>
+                        <div class="board-text">
+                          <p>[참여] 힘은 무엇일까요?</p>
+                          <p>
+                            그림 조각을 가지고 나의 힘을 발휘 할 수 있는 관계를
+                            설정
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        class="swiper-slide board flex flex-col items-center justify-center"
+                      >
+                        <div class="board-photo">
+                          <img
+                            src="./assets/images/deepnight.jpg"
+                            alt="북토크"
+                          />
+                        </div>
+                        <div class="board-text">
+                          <p>[북토크] 일몰과 일출사이에</p>
+                          <p>
+                            푹신한 밤, 아득한 밤, 외로운 밤, 무수한 밤, 감당하는
+                            밤들의 채움
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
 
-								<span><i class="fa-solid fa-arrow-right-long"></i></span>
-							</button>
+          <!-- section-6: 책 속 밑줄 -->
+          <section class="section-6">
+            <div
+              class="book-mark-container max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+            >
+              <div class="book-mark flex flex-col items-center">
+                <div
+                  class="book-mark__header flex justify-between items-end w-full mx-auto"
+                >
+                  <div class="book-mark__left">
+                    <h1 class="book-mark__title flex">
+                      <p>책 속 밑줄</p>
+                    </h1>
+                    <div class="book-mark__text">
+                      <p>읽다 발견한 띵작 글귀 소개</p>
+                    </div>
+                  </div>
+                  <div class="book-mark__right">
+                    <button
+                      class="book-mark__button flex items-center justify-center"
+                    >
+                      <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <!-- 슬라이드 & 형광펜효과 -->
+                <div class="book-mark__content swiper relative w-full">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div class="book-mark__wrap flex justify-center">
+                        <div class="script-box flex flex-col">
+                          <div
+                            class="script-inner flex flex-col justify-center"
+                          >
+                            <h3 class="script-text flex flex-col">
+                              <i class="fa-solid fa-quote-left"></i>
+                              <div class="text-group">
+                                <p class="line-primary">
+                                  긴 놀이는 휴식이 된다.
+                                </p>
+                                <p class="line-primary">긴 잠은 운동이 된다.</p>
+                                <p class="line-primary">
+                                  긴 머리카락은
+                                  <span class="hl">근성의 지표가 된다.</span>
+                                </p>
+                                <p class="line-primary">
+                                  <span class="hl"
+                                    >긴 것은 활동이 되고, 직업이 된다.</span
+                                  >
+                                </p>
+                              </div>
+                              <i class="fa-solid fa-quote-right"></i>
+                            </h3>
+                            <div class="script-title flex flex-col items-end">
+                              <span class="tit"
+                                >&lt; 미래는 우연이 아니기 때문에 &gt;</span
+                              >
+                              <span class="script-author">김미래</span>
+                            </div>
+                            <div
+                              class="script-tag tag-small flex justify-center"
+                            >
+                              <div class="tag-1">
+                                <button class="small-button">#삶의 태도</button>
+                              </div>
+                              <div class="tag-2">
+                                <button class="small-button">#미래고찰</button>
+                              </div>
+                              <div class="tag-3">
+                                <button class="small-button">#삶의 고찰</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book-box flex items-center">
+                          <div class="book-cover">
+                            <img
+                              src="./assets/images/future.jpg"
+                              alt="미래는우연이아니기때문에"
+                            />
+                          </div>
 
-						</div>
-						<div class="subscription__content flex items-center max-w-[1602px] w-full justify-center">
-							<div class="monthly-area grid grid-cols-1 lg:grid-cols-2 gap-y-8 lg:gap-y-7 lg:gap-x-2">
-								<!-- 좌측아이템 -->
-								<div class="attention-item flex flex-col items-center">
-									<div class="attention-con flex flex-col justify-between w-full h-full">
-										<div class="attention-top flex items-center justify-between w-full">
-											<div class="brand">Slow page</div>
-											<span><i class="fa-solid fa-arrow-right-long"></i></span>
-										</div>
-										<div class="attention-book flex items-center justify-center">
-											<a href="#">
-												<img src="./assets/images/white-out.png" alt="화이트 아웃">
-											</a>
-											<p class="text">'나'라는 인간의 중심을 잡도록 도와주는 책</p>
-										</div>
-										<div class="attention-box flex items-center justify-center w-full">
-											<p class="month">12월</p>
-											<div class="book-info">
-												<p class="book-name">White out</p>
-												<p class="attention-author">김로로</p>
-											</div>
-										</div>
-									</div>
+                          <div class="script-title mobile-script-title">
+                            <span class="tit">미래는 우연이 아니기 때문에</span>
+                            <span class="script-author">김미래</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="book-mark__wrap flex justify-center">
+                        <div class="script-box flex flex-col">
+                          <div
+                            class="script-inner flex flex-col justify-center"
+                          >
+                            <h3 class="script-text flex flex-col">
+                              <i class="fa-solid fa-quote-left"></i>
+                              <div class="text-group">
+                                <p class="line-primary">
+                                  돌은 나무 곁에 기대어 눈을 감았다.
+                                </p>
+                                <p class="line-primary">
+                                  사라진 글자와 잃어버린 마음을 생각했다.
+                                </p>
+                                <p class="line-primary">
+                                  <span class="hl"
+                                    >지금 함께 없는 글자와 마음이<br />옆에 있는
+                                    나무보다 더 가깝게 느껴졌다.</span
+                                  >
+                                </p>
+                              </div>
+                              <i class="fa-solid fa-quote-right"></i>
+                            </h3>
+                            <div class="script-title flex flex-col items-end">
+                              <span class="tit">&lt; 돌과 말 &gt;</span>
+                              <span class="script-author">임희선</span>
+                            </div>
+                            <div
+                              class="script-tag tag-small flex justify-center"
+                            >
+                              <div class="tag-1">
+                                <button class="small-button">
+                                  #말하지 않아도
+                                </button>
+                              </div>
+                              <div class="tag-2">
+                                <button class="small-button">
+                                  #마음이 있는 곳
+                                </button>
+                              </div>
+                              <div class="tag-3">
+                                <button class="small-button">
+                                  #머뭄과 사라짐
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book-box flex items-center justify-center">
+                          <div class="book-cover">
+                            <img
+                              src="./assets/images/stone.webp"
+                              alt="돌과말"
+                            />
+                          </div>
 
-								</div>
+                          <div class="script-title mobile-script-title">
+                            <span class="tit">돌과 말</span>
+                            <span class="script-author">임희선</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="book-mark__wrap flex justify-center">
+                        <div class="script-box flex flex-col">
+                          <div
+                            class="script-inner flex flex-col justify-center"
+                          >
+                            <h3 class="script-text flex flex-col">
+                              <i class="fa-solid fa-quote-left"></i>
+                              <div class="text-group">
+                                <p class="line-primary">
+                                  <span class="hl"
+                                    >그저 나 라는 사람의 반복일 뿐인</span
+                                  >
+                                </p>
+                                <p class="line-primary">
+                                  <span class="hl"
+                                    >이 글이 잠깐이라도<br />웃을수 있는 시간을
+                                    가져다 주길.</span
+                                  >
+                                </p>
+                                <p class="line-primary">
+                                  <span class="hl"
+                                    >다른 책으로 건너갈<br />한 줄이 되어주길
+                                    바란다.</span
+                                  >
+                                </p>
+                              </div>
+                              <i class="fa-solid fa-quote-right"></i>
+                            </h3>
+                            <div class="script-title flex flex-col items-end">
+                              <span class="tit"
+                                >&lt; 집에 다 와서야 떠오르는 대답 &gt;</span
+                              >
+                              <span class="script-author">임소라</span>
+                            </div>
+                            <div
+                              class="script-tag tag-small flex justify-center"
+                            >
+                              <div class="tag-1">
+                                <button class="small-button">
+                                  #독립과 의존
+                                </button>
+                              </div>
+                              <div class="tag-2">
+                                <button class="small-button">#일기</button>
+                              </div>
+                              <div class="tag-3">
+                                <button class="small-button">
+                                  #혼자있는게 좋은 사람
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="book-box flex items-center justify-center">
+                          <div class="book-cover">
+                            <img
+                              src="./assets/images/home.webp"
+                              alt="집에다와서야떠오르는대답"
+                            />
+                          </div>
 
-								<!-- 우측아이템	: 4개 book영역-->
-								<div class="sub-item grid grid-cols-2">
-									<div class="sub-book flex flex-col items-center">
-										<a href="#" data-aos="fade-up">
-											<img src="./assets/images/winter.webp" alt="겨울특집">
-										</a>
-										<div class="text-inner">
-											<div class="text" data-aos="fade-up" data-aos-duration="700" data-aos-delay="120">"겨울을 보는 시선"</div>
-										</div>
-										<div class="sub-box flex items-center justify-center w-full">
-											<div class="month">11월</div>
-											<div class="book-info">
-												<div class="book-name">겨울특집</div>
-												<div class="author">&nbsp;마사진영</div>
-											</div>
-										</div>
-									</div>
-									<div class="sub-book flex flex-col items-center">
-										<a href="#" data-aos="fade-up">
-											<img src="./assets/images/budybudy.webp" alt="버디버디">
-										</a>
-										<div class="text-inner">
-											<div class="text" data-aos="fade-up" data-aos-delay="120">"당신 마음속 단짝"</div>
-										</div>
-										<div class="sub-box flex items-center justify-center w-full">
-											<div class="month">10월</div>
-											<div class="book-info flex-col">
-												<div class="book-name">Buddy Buddy</div>
-												<div class="author">&nbsp;마사진영</div>
-											</div>
-										</div>
-									</div>
-									<div class="sub-book flex flex-col items-center">
-										<a href="#" data-aos="fade-up">
-											<img src="./assets/images/achim.webp" alt="아침">
-										</a>
-										<div class="text-inner">
-											<div class="text" data-aos="fade-up" data-aos-delay="120">"경계없는 세상보기"</div>
-										</div>
+                          <div class="script-title mobile-script-title">
+                            <span class="tit"
+                              >집에 다 와서야 떠오르는 대답</span
+                            >
+                            <span class="script-author">임소라</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
-										<div class="sub-box flex items-center justify-center w-full">
-											<div class="month">9월</div>
-											<div class="book-info flex-col">
-												<div class="book-name">Achim</div>
-												<div class="author">&nbsp;Achim</div>
-											</div>
-										</div>
-									</div>
-									<div class="sub-book flex flex-col items-center">
-										<a href="#" data-aos="fade-up">
-											<img src="./assets/images/killing.webp" alt="킬링 앤 다잉">
-										</a>
-										<div class="text-inner">
-											<div class="text" data-aos="fade-up" data-aos-delay="120">"감정의 밀실 경험"</div>
-										</div>
-										<div class="sub-box flex items-center justify-center w-full">
-											<div class="month">8월</div>
-											<div class="book-info flex-col">
-												<div class="book-name">킬링 앤 다잉</div>
-												<div class="author">&nbsp;에이드리언 토미네</div>
-											</div>
-										</div>
-									</div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-								</div>
-							</div>
-						</div>
-					</article>
-			</section>
+          <!-- section-7: 베스트 추천 -->
+          <section class="section-7 w-full h-screen">
+            <div
+              class="scroll-container flex items-center w-full h-screen px-[24px] lg:px-[40px]"
+            >
+              <div
+                class="intro-overlay inset-0 flex items-center justify-center z-[50]"
+              >
+                <div class="book-wrapper">
+                  <div class="book-cover">
+                    <div class="book-front">
+                      <img
+                        src="./assets/images/glass-tableware.webp"
+                        alt="cover"
+                        class="shadow-2xl"
+                      />
+                    </div>
+                    <div class="book-inside"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="best__bg bg-layer">
+                <video
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  id="bg-video"
+                  src="./assets/video/books.mp4"
+                  type="video/mp4"
+                ></video>
+              </div>
+              <div
+                class="best__header w-full max-w-[1602px] mx-auto flex justify-between items-end"
+              >
+                <div class="best__left">
+                  <h1 class="best__title flex">
+                    <p>베스트 추천</p>
+                  </h1>
+                  <div class="best__text">
+                    <p>지금 주목할 책을 만나보세요</p>
+                  </div>
+                </div>
+                <div class="best__right">
+                  <button class="best__button flex items-center justify-center">
+                    <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                  </button>
+                </div>
+              </div>
+              <div class="best flex flex-col items-center">
+                <div class="best__content w-full h-full flex items-center">
+                  <div class="card-track flex">
+                    <div class="card card-1 flex flex-col">
+                      <div class="card-box">
+                        <img
+                          src="./assets/images/2026twelve.webp"
+                          alt="2026트웰브저니"
+                        />
+                      </div>
+                      <div class="card-content">
+                        <p class="desc">2026<br />Twelve Journeys</p>
+                        <span class="author">Lee Kyutae</span>
+                      </div>
+                    </div>
+                    <div class="card card-2">
+                      <div class="card-box">
+                        <img
+                          src="./assets/images/fragment.webp"
+                          alt="fragment"
+                        />
+                      </div>
+                      <div class="card-content">
+                        <p class="desc">봄의 조각들<br />Fragments of Spring</p>
+                        <span class="author">정은지</span>
+                      </div>
+                    </div>
+                    <div class="card card-3">
+                      <div class="card-box">
+                        <img
+                          src="./assets/images/glass-tableware.webp"
+                          alt="glassTableWare"
+                        />
+                      </div>
+                      <div class="card-content">
+                        <p class="desc">Glass Tableware<br />in Still Life</p>
+                        <span class="author"
+                          >Andersson Yamano & Masahiro Sambe</span
+                        >
+                      </div>
+                    </div>
+                    <div class="card card-4">
+                      <div class="card-box">
+                        <img
+                          src="./assets/images/naoshima.webp"
+                          alt="nashima"
+                        />
+                      </div>
+                      <div class="card-content">
+                        <p class="desc">나의<br />나오시마</p>
+                        <span class="author">우정</span>
+                      </div>
+                    </div>
+                    <div class="card card-5">
+                      <div class="card-box">
+                        <img
+                          src="./assets/images/around.webp"
+                          alt="한참을 헤매다가"
+                        />
+                      </div>
+                      <div class="card-content">
+                        <p class="desc">한참을<br />헤매다가</p>
+                        <span class="author">정미진</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-			<!-- section-4: 지금인기태그 -->
-			<section class="section-4 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-				<div class="tag-container">
-					<div class="tag flex flex-col">
-						<div class="tag__header flex max-w-[1602px] flex justify-between items-end w-full mx-auto">
-							<div class="tag__left">
-								<div class="tag__title flex">
-									<p>지금 인기</p>
-									<p class="light-text">#태그</p>
-								</div>
-								<div class="tag__text">
-									<p>내 마음이 말하는 맞춤 키워드 검색</p>
-								</div>
-							</div>
-							<div class="tag__right">
-								<button class="tag__button flex items-center justify-center">
+          <!-- section-8: 슬로우페이지 랭킹 -->
+          <section class="section-8">
+            <div
+              class="lank-container max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+            >
+              <div class="lank flex flex-col items-center">
+                <div
+                  class="lank__header flex justify-between items-end w-full mx-auto"
+                >
+                  <div class="lank__left">
+                    <h1 class="lank__title flex">
+                      <p>슬로우 페이지 랭킹</p>
+                    </h1>
+                    <div class="lank__text">
+                      <p>다른 사람들은 어떤걸 읽을까 확인하기</p>
+                    </div>
+                  </div>
+                  <div class="lank__right">
+                    <button
+                      class="lank__button flex items-center justify-center"
+                    >
+                      <span><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="lank__content flex items-start justify-between">
+                  <div class="timeline__inner">
+                    <div class="timeline-base"></div>
+                    <div class="timeline-active"></div>
+                    <div class="timeline-dots-wrapper">
+                      <div class="timeline-dot dot-1"></div>
+                      <div class="timeline-dot dot-2"></div>
+                      <div class="timeline-dot dot-3"></div>
+                      <div class="timeline-dot dot-4"></div>
+                      <div class="timeline-dot dot-5"></div>
+                    </div>
+                  </div>
+                  <div class="lank__item item-odd">
+                    <div class="lank-number">1</div>
+                    <div class="lank__box w-full">
+                      <img
+                        src="./assets/images/trip3.png"
+                        alt="트래블스 북마크"
+                      />
+                    </div>
+                    <div class="lank-shadow"></div>
+                    <div class="lank-info">
+                      <p>***님의 리뷰</p>
+                      <p>여행을 다녀온듯 남은 것</p>
+                    </div>
+                  </div>
+                  <div class="lank__item item-even">
+                    <div class="lank-number">2</div>
+                    <div class="lank__box w-full">
+                      <img src="./assets/images/rain2.jpg" alt="마이 비 데이" />
+                    </div>
+                    <div class="lank-shadow"></div>
+                    <div class="lank-info">
+                      <p>***님의 리뷰</p>
+                      <p>20대 초반에 봤다면 더 좋았을 텐데!</p>
+                    </div>
+                  </div>
+                  <div class="lank__item item-odd">
+                    <div class="lank-number">3</div>
+                    <div class="lank__box w-full">
+                      <img
+                        src="./assets/images/trip4.jpg"
+                        alt="아이슬란드를 여행하기"
+                      />
+                    </div>
+                    <div class="lank-shadow"></div>
+                    <div class="lank-info">
+                      <p>***님의 리뷰</p>
+                      <p>관계를 만들어가는 것을 생각하게함</p>
+                    </div>
+                  </div>
+                  <div class="lank__item item-even">
+                    <div class="lank-number">4</div>
+                    <div class="lank__box w-full">
+                      <img
+                        src="./assets/images/heart2.png"
+                        alt="움직이는 마음들"
+                      />
+                    </div>
+                    <div class="lank-shadow"></div>
+                    <div class="lank-info">
+                      <p>***님의 리뷰</p>
+                      <p>마음이 움직인다는 건 뭘까</p>
+                    </div>
+                  </div>
+                  <div class="lank__item item-odd">
+                    <div class="lank-number">5</div>
+                    <div class="lank__box w-full">
+                      <img
+                        src="./assets/images/lovebrave.webp"
+                        alt="사랑한다고 말할 용기"
+                      />
+                    </div>
+                    <div class="lank-shadow"></div>
+                    <div class="lank-info">
+                      <p>***님의 리뷰</p>
+                      <p>사랑한다고 말할 용기!</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
 
-									<span><i class="fa-solid fa-arrow-right-long"></i></span>
-								</button>
-							</div>
-						</div>
-						<div class="tag__content flex justify-between">
-							<div class="tag-main flex flex-col">
-								<div class="tag-small flex">
-									<div class="tag-1">
-										<button class="small-button">
-											<span>#생활속발견</span>
-										</button>
-									</div>
-									<div class="tag-2">
-										<button class="small-button">
-											<span>#화장실에서 보고 싶은 책</span>
-										</button>
-									</div>
-								</div>
-								<div class="tag-img"></div>
-								<div class="tag-book-info">
-									<p class="book-title">
-										&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Science of the Secondary: TOILET PAPER · ATELIER HOKO
-									</p>
-								</div>
-							</div>
-							<div class="tag-box flex flex-col">
-								<div class="tag-small flex">
-									<div class="tag-3">
-										<button class="small-button">
-											<span>#12월에 보고싶은 책</span>
-										</button>
-									</div>
-									<div class="tag-4">
-										<button class="small-button">
-											<span>#우울할 때</span>
-										</button>
-									</div>
-									<div class="tag-5">
-										<button class="small-button">
-											<span>#감성시집</span>
-										</button>
-									</div>
-								</div>
-								<div class="tag-large flex flex-col">
-									<div class="large-button">
-										<button class="large-text">
-											<span class="typing-line">#화창한 날 소풍같은 책</span>
-											<span class="plus">+</span>
-										</button>
+          <!-- section-9: 커뮤니티 -->
+          <section class="section-9 parallax-section">
+            <div
+              class="parallax max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]"
+            >
+              <div
+                class="parallax__inner w-full flex items-center justify-content"
+              >
+                <div
+                  class="parallax__content flex items-center justify-between w-full"
+                >
+                  <!--  커뮤니티 영역	-->
+                  <div
+                    class="community__box flex flex-col justify-center w-full"
+                  >
+                    <h1 class="community-title">커뮤니티</h1>
+                    <p class="community-text">어떤 이야기든 일상생활 Talk</p>
+                    <span class="btn-talk"
+                      >톡 하러가기
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                  </div>
+                  <div
+                    class="memo__box flex flex-col items-center justify-center w-full"
+                  >
+                    <div class="memo__wrap flex flex-col w-full">
+                      <div
+                        class="memo__inner flex flex-col items-center w-full"
+                      >
+                        <div class="memo__content">
+                          <h1 class="memo-title">오늘 저녁</h1>
+                          <p class="memo-text">
+                            주말이여 안녕...하루종일 밀당만 하다 가는구나...
+                          </p>
+                        </div>
+                        <div class="memo-photo flex justify-center w-full">
+                          <img
+                            src="https://picsum.photos/300/150"
+                            alt="메모사진"
+                          />
+                        </div>
+                        <span class="divider"></span>
+                        <!-- 작성자 정보 -->
+                        <div
+                          class="sns-item w-full flex flex-col items-center justify-center"
+                        >
+                          <div
+                            class="sns-info w-full flex items-center justify-start"
+                          >
+                            <div class="privacy-img">
+                              <img
+                                src="https://picsum.photos/30/30"
+                                alt="사용자"
+                              />
+                            </div>
+                            <div class="sns-name flex items-center">
+                              <span class="nickName">도심속 강아지</span>
+                            </div>
+                          </div>
+                          <div class="sns-state flex items-center">
+                            <div
+                              class="sns-meta flex items-center justify-between"
+                            >
+                              <span class="date">2025. 12. 07 18:51</span>
+                              <div class="icon-item flex items-center"></div>
+                            </div>
+                            <div class="icon-group flex">
+                              <div class="sns-icon flex items-center">
+                                <i class="fa-regular fa-heart"></i>
+                                <span>0</span>
+                              </div>
+                              <div class="sns-icon flex items-center">
+                                <i class="fa-regular fa-comment-dots"></i>
+                                <span>1</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 모바일용 톡버튼	 -->
+                  <span class="mobile-btn-talk"
+                    >톡 하러가기
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
 
-										<!-- 펼쳐질 영역	-->
-										<div class="accordion-content">
-											<div class="inner-wrapper">
-												<div class="book-thumb">
-													<img src="./assets/images/picnic1.jpg" alt="화창한 소풍 추천책1">
-													<img src="./assets/images/picnic2.png" alt="화창한 소풍 추천책2">
-													<img src="./assets/images/picnic3.png" alt="화창한 소풍 추천책3">
-													<img src="./assets/images/picnic4.jpg" alt="화창한 소풍 추천책4">
-												</div>
-											</div>
-										</div>
+      <!-- 푸터 시작  -->
+      <footer id="footer-wrap">
+        <!-- PC 푸터 -->
+        <div id="pc-footer">
+          <div class="footer-inner w-full">
+            <div
+              class="content__box w-full flex flex-col items-center justify-center"
+            >
+              <div class="content__top w-full flex items-center justify-center">
+                <div class="contact">
+                  <div class="contact-tit tit">contact</div>
+                  <div class="contact-info infor">
+                    <p>privacy@gmail.com</p>
+                    <p>대표번호 1544-3800</p>
+                    <p>경기도 안산시 단원구 중앙대로 929</p>
+                  </div>
+                </div>
+                <div class="info">
+                  <div class="info-tit tit">Info</div>
+                  <div class="info-list infor">
+                    <p>제2026-경기안산-3332호</p>
+                    <p>266-81-02738</p>
+                    <div class="guide flex gap-[1rem]">
+                      <p>Privacy</p>
+                      <p>Policy</p>
+                      <p>About Us</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="follow-us flex flex-col">
+                  <div class="follow-tit tit">Follow Us</div>
+                  <div class="follow-info">
+                    <ul class="flex items-center">
+                      <li class="insta">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/instagram.png"
+                            alt="인스타 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/youtube.png"
+                            alt="유투브 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="kakaotalk">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/kakaotalk.png"
+                            alt="카카오톡 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="naverCafe">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/naver-cafe.png"
+                            alt="네이버 카페"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="content__bottom flex items-center justify-center">
+                <div class="copyright">
+                  <p>Copyright ©2026 slowpage. All rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 모바일 푸터-->
+        <div id="mobile-footer">
+          <div class="footer-inner w-full">
+            <div
+              class="content__box w-full flex flex-col items-center justify-center"
+            >
+              <div
+                class="content__top w-full flex flex-col items-center justify-center"
+              >
+                <div class="contact">
+                  <div class="contact-info infor">
+                    <p>privacy@gmail.com</p>
+                    <p>대표번호 1544-3800</p>
+                    <p>경기도 안산시 단원구 중앙대로 929</p>
+                  </div>
+                </div>
+                <div class="guide flex flex-col">
+                  <p>Privacy</p>
+                  <p>Policy</p>
+                  <p>About Us</p>
+                </div>
+              </div>
+              <div class="line"></div>
 
-									</div>
-									<div class="large-button">
-										<button class="large-text">
-											<span class="typing-line">#비 올때 보고 싶은 책</span>
-											<span class="plus">+</span>
-										</button>
-
-										<!-- 펼쳐질 영역	-->
-										<div class="accordion-content">
-											<div class="inner-wrapper">
-												<div class="book-thumb">
-													<img src="./assets/images/rain1.jpg" alt="비 올때 추천책1">
-													<img src="./assets/images/rain2.jpg" alt="비 올때 추천책2">
-													<img src="./assets/images/rain3.jpg" alt="비 올때 추천책3">
-													<img src="./assets/images/rain4.png" alt="비 올때 추천책4">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="large-button">
-										<button class="large-text">
-											<span class="typing-line">#마음 따뜻하게 해줄래</span>
-											<span class="plus">+</span>
-										</button>
-										<!-- 펼쳐질 영역	-->
-										<div class="accordion-content">
-											<div class="inner-wrapper">
-												<div class="book-thumb">
-													<img src="./assets/images/heart1.jpg" alt="마음따뜻 추천책1">
-													<img src="./assets/images/heart2.png" alt="마음따뜻 추천책2">
-													<img src="./assets/images/heart3.png" alt="마음따뜻 추천책3">
-													<img src="./assets/images/heart4.png" alt="마음따뜻 추천책4">
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="large-button">
-										<button class="large-text">
-											<span class="typing-line">#떠나고 싶을 때</span>
-											<span class="plus">+</span>
-										</button>
-										<!-- 펼쳐질 영역	-->
-										<div class="accordion-content">
-											<div class="inner-wrapper">
-												<div class="book-thumb">
-													<img src="./assets/images/trip1.png" alt="떠나고 싶을때 추천책1">
-													<img src="./assets/images/trip2.jpg" alt="떠나고 싶을때 추천책2">
-													<img src="./assets/images/trip3.png" alt="떠나고 싶을때 추천책3">
-													<img src="./assets/images/trip4.jpg" alt="떠나고 싶을때 추천책4">
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- 띠배너 -->
-						<div class="band-banner" data-aos="fade" data-aos-anchor-placement="top-bottom" data-aos-once="true">
-							<div class="band-content flex items-center justify-between">
-								<div class="band-text ">
-									<h3 class="band-title">
-										소설 보다: 겨울 2026
-									</h3>
-									<p class="band-des">1년 한정판매 소설보다 시리즈 출간! 겨울의 소설적 풍경을 그려내다</p>
-								</div>
-								<div class="band-book flex self-end" data-aos="fade-up">
-									<img src="./assets/images/line-banner_book.png" alt="띠배너 북이미지">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- section-5: News -->
-			<section class="section-5 max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-				<div class="news-container">
-					<div class="news flex flex-col">
-						<div class="news__header flex max-w-[1602px] flex justify-between items-end w-full mx-auto">
-							<div class="news__left">
-								<h1 class="news__title flex">
-									<p>News</p>
-								</h1>
-								<div class="news__text">
-									<p>새로나온 책과 요즘 어떤 소식</p>
-								</div>
-							</div>
-							<div class="news__right">
-								<button class="news__button flex items-center justify-center">
-
-									<span><i class="fa-solid fa-arrow-right-long"></i></span>
-								</button>
-
-							</div>
-						</div>
-						<div class="news__content flex">
-							<div class="book-area">
-								<div class="book-card book-card-default">
-									<img src="./assets/images/nishi-shuku.jpg" class="book-img" alt="니시슈쿠" />
-									<div class="book-title flex flex-col">
-										<h3></h3>
-									</div>
-									<div class="book-info">
-										<p>Nishi Shuku</p>
-									</div>
-								</div>
-
-								<div class="book-card flex">
-									<img src="./assets/images/berlin.png" class="book-img" alt="베를린편지" />
-									<div class="book-title">
-										<h3>berlin</h3>
-									</div>
-									<div class="book-info">
-										<p>briefe</p>
-										<p>박진</p>
-									</div>
-								</div>
-
-								<div class="book-card">
-									<img src="./assets/images/heart4.png" class="book-img" alt="Society" />
-									<div class="book-title">
-										<h3>Society</h3>
-									</div>
-									<div class="book-info">
-										<p>건축사사무소 SoA</p>
-									</div>
-								</div>
-
-								<div class="book-card">
-									<img src="./assets/images/trip2.jpg" class="book-img" alt="pudding" />
-									<div class="book-title">
-										<h3>사과여행</h3>
-									</div>
-									<div class="book-info">
-										<p>신현림</p>
-									</div>
-								</div>
-							</div>
-							<article class="news-board swiper newsSwiper">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide board flex flex-col items-center justify-center">
-										<div class="board-photo">
-											<img src="./assets/images/mypower.png" alt="참여">
-										</div>
-										<div class="board-text">
-											<p>[참여] 힘은 무엇일까요?</p>
-											<p>그림 조각을 가지고 나의 힘을 발휘 할 수 있는 관계를 설정</p>
-										</div>
-									</div>
-									<div class="swiper-slide board flex flex-col items-center justify-center">
-										<div class="board-photo">
-											<img src="./assets/images/deepnight.jpg" alt="북토크">
-										</div>
-										<div class="board-text">
-											<p>[북토크] 일몰과 일출사이에</p>
-											<p>푹신한 밤, 아득한 밤, 외로운 밤, 무수한 밤, 감당하는 밤들의 채움</p>
-										</div>
-									</div>
-									<div class="swiper-slide board flex flex-col items-center justify-center">
-										<div class="board-photo">
-											<img src="./assets/images/mypower.png" alt="참여">
-										</div>
-										<div class="board-text">
-											<p>[참여] 힘은 무엇일까요?</p>
-											<p>그림 조각을 가지고 나의 힘을 발휘 할 수 있는 관계를 설정</p>
-										</div>
-									</div>
-									<div class="swiper-slide board flex flex-col items-center justify-center">
-										<div class="board-photo">
-											<img src="./assets/images/deepnight.jpg" alt="북토크">
-										</div>
-										<div class="board-text">
-											<p>[북토크] 일몰과 일출사이에</p>
-											<p>푹신한 밤, 아득한 밤, 외로운 밤, 무수한 밤, 감당하는 밤들의 채움</p>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-pagination"></div>
-							</article>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- section-6: 책 속 밑줄 -->
-			<section class="section-6">
-				<div class="book-mark-container max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-					<div class="book-mark flex flex-col items-center">
-						<div class="book-mark__header flex justify-between items-end w-full mx-auto">
-							<div class="book-mark__left">
-								<h1 class="book-mark__title flex">
-									<p>책 속 밑줄</p>
-								</h1>
-								<div class="book-mark__text">
-									<p>읽다 발견한 띵작 글귀 소개</p>
-								</div>
-							</div>
-							<div class="book-mark__right">
-								<button class="book-mark__button flex items-center justify-center">
-									<span><i class="fa-solid fa-arrow-right-long"></i></span>
-								</button>
-							</div>
-						</div>
-						<!-- 슬라이드 & 형광펜효과 -->
-						<div class="book-mark__content swiper relative w-full">
-							<div class="swiper-wrapper">
-								<div class="swiper-slide">
-									<div class="book-mark__wrap flex justify-center">
-										<div class="script-box flex flex-col">
-											<div class="script-inner flex flex-col justify-center">
-												<h3 class="script-text flex flex-col">
-													<i class="fa-solid fa-quote-left"></i>
-													<div class="text-group">
-														<p class="line-primary">긴 놀이는 휴식이 된다.</p>
-														<p class="line-primary">긴 잠은 운동이 된다.</span></p>
-														<p class="line-primary">긴 머리카락은 <span class="hl">근성의 지표가 된다.</p>
-														<p class="line-primary"><span class="hl">긴 것은 활동이 되고, 직업이 된다.</span></p>
-													</div>
-													<i class="fa-solid fa-quote-right"></i>
-												</h3>
-												<div class="script-title flex flex-col items-end">
-													<span class="tit">&lt; 미래는 우연이 아니기 때문에 &gt;</span>
-													<span class="script-author">김미래</span>
-												</div>
-												<div class="script-tag tag-small flex justify-center">
-													<div class="tag-1"><button class="small-button">#삶의 태도</button></div>
-													<div class="tag-2"><button class="small-button">#미래고찰</button></div>
-													<div class="tag-3"><button class="small-button">#삶의 고찰</button></div>
-												</div>
-											</div>
-										</div>
-										<div class="book-box flex items-center">
-											<div class="book-cover"><img src="./assets/images/future.jpg" alt="미래는우연이아니기때문에"></div>
-
-											<div class="script-title mobile-script-title">
-												<span class="tit">미래는 우연이 아니기 때문에</span>
-												<span class="script-author">김미래</span>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="book-mark__wrap flex justify-center">
-										<div class="script-box flex flex-col">
-											<div class="script-inner flex flex-col justify-center">
-												<h3 class="script-text flex flex-col">
-													<i class="fa-solid fa-quote-left"></i>
-													<div class="text-group">
-														<p class="line-primary">돌은 나무 곁에 기대어 눈을 감았다.</p>
-														<p class="line-primary">사라진 글자와 잃어버린 마음을 생각했다.</p>
-														<p class="line-primary"><span class="hl">지금 함께 없는 글자와 마음이<br>옆에 있는 나무보다 더 가깝게 느껴졌다.</span></p>
-													</div>
-													<i class="fa-solid fa-quote-right"></i>
-												</h3>
-												<div class="script-title flex flex-col items-end">
-													<span class="tit">&lt; 돌과 말 &gt;</span>
-													<span class="script-author">임희선</span>
-												</div>
-												<div class="script-tag tag-small flex justify-center">
-													<div class="tag-1"><button class="small-button">#말하지 않아도</button></div>
-													<div class="tag-2"><button class="small-button">#마음이 있는 곳</button></div>
-													<div class="tag-3"><button class="small-button">#머뭄과 사라짐</button></div>
-												</div>
-											</div>
-										</div>
-										<div class="book-box flex items-center justify-center">
-											<div class="book-cover"><img src="./assets/images/stone.webp" alt="돌과말"></div>
-
-											<div class="script-title mobile-script-title">
-												<span class="tit">돌과 말</span>
-												<span class="script-author">임희선</span>
-											</div>
-										</div>
-
-									</div>
-								</div>
-								<div class="swiper-slide">
-									<div class="book-mark__wrap flex justify-center">
-										<div class="script-box flex flex-col">
-											<div class="script-inner flex flex-col justify-center">
-												<h3 class="script-text flex flex-col">
-													<i class="fa-solid fa-quote-left"></i>
-													<div class="text-group">
-														<p class="line-primary"><span class="hl">그저 나 라는 사람의 반복일 뿐인</span></p>
-														<p class="line-primary"><span class="hl">이 글이 잠깐이라도<br>웃을수 있는 시간을 가져다 주길.</span></p>
-														<p class="line-primary"><span class="hl">다른 책으로 건너갈<br>한 줄이 되어주길 바란다.</span></p>
-													</div>
-													<i class="fa-solid fa-quote-right"></i>
-												</h3>
-												<div class="script-title flex flex-col items-end">
-													<span class="tit">&lt; 집에 다 와서야 떠오르는 대답 &gt;</span>
-													<span class="script-author">임소라</span>
-												</div>
-												<div class="script-tag tag-small flex justify-center">
-													<div class="tag-1"><button class="small-button">#독립과 의존</button></div>
-													<div class="tag-2"><button class="small-button">#일기</button></div>
-													<div class="tag-3"><button class="small-button">#혼자있는게 좋은 사람</button></div>
-												</div>
-											</div>
-										</div>
-										<div class="book-box flex items-center justify-center">
-											<div class="book-cover"><img src="./assets/images/home.webp" alt="집에다와서야떠오르는대답"></div>
-
-											<div class="script-title mobile-script-title">
-												<span class="tit">집에 다 와서야 떠오르는 대답</span>
-												<span class="script-author">임소라</span>
-											</div>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-pagination"></div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- section-7: 베스트 추천 -->
-			<section class="section-7 w-full h-screen">
-				<div class="scroll-container flex items-center w-full h-screen px-[24px] lg:px-[40px]">
-					<div class="intro-overlay inset-0 flex items-center justify-center z-[50]">
-						<div class="book-wrapper">
-							<div class="book-cover">
-								<div class="book-front">
-									<img src="./assets/images/glass-tableware.webp" alt="cover" class="shadow-2xl">
-								</div>
-								<div class="book-inside"></div>
-							</div>
-						</div>
-					</div>
-					<div class="best__bg bg-layer">
-						<video autoplay muted loop playsinline id="bg-video" src="./assets/video/books.mp4" type="video/mp4"></video>
-					</div>
-					<div class="best__header w-full max-w-[1602px] mx-auto flex justify-between items-end">
-						<div class="best__left">
-							<h1 class="best__title flex">
-								<p>베스트 추천</p>
-							</h1>
-							<div class="best__text">
-								<p>지금 주목할 책을 만나보세요</p>
-							</div>
-						</div>
-						<div class="best__right">
-							<button class="best__button flex items-center justify-center">
-								<span><i class="fa-solid fa-arrow-right-long"></i></span>
-							</button>
-						</div>
-					</div>
-					<div class="best flex flex-col items-center">
-						<div class="best__content w-full h-full flex items-center">
-							<div class="card-track flex">
-								<div class="card card-1 flex flex-col ">
-									<div class="card-box">
-										<img src="./assets/images/2026twelve.webp" alt="2026트웰브저니">
-									</div>
-									<div class="card-content">
-										<p class="desc">2026<br>Twelve Journeys</p>
-										<span class="author">Lee Kyutae</span>
-									</div>
-								</div>
-								<div class="card card-2">
-									<div class="card-box">
-										<img src="./assets/images/fragment.webp" alt="fragment">
-									</div>
-									<div class="card-content">
-										<p class="desc">봄의 조각들<br>Fragments of Spring</p>
-										<span class="author">정은지</span>
-									</div>
-								</div>
-								<div class="card card-3">
-									<div class="card-box">
-										<img src="./assets/images/glass-tableware.webp" alt="glassTableWare">
-									</div>
-									<div class="card-content">
-										<p class="desc">Glass Tableware<br>in Still Life</p>
-										<span class="author">Andersson Yamano & Masahiro Sambe</span>
-									</div>
-								</div>
-								<div class="card card-4">
-									<div class="card-box">
-										<img src="./assets/images/naoshima.webp" alt="nashima">
-									</div>
-									<div class="card-content">
-										<p class="desc">나의<br>나오시마</p>
-										<span class="author">우정</span>
-									</div>
-								</div>
-								<div class="card card-5">
-									<div class="card-box">
-										<img src="./assets/images/around.webp" alt="한참을 헤매다가">
-									</div>
-									<div class="card-content">
-										<p class="desc">한참을<br>헤매다가</p>
-										<span class="author">정미진</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- section-8: 슬로우페이지 랭킹 -->
-			<section class="section-8">
-				<div class="lank-container max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-					<div class="lank flex flex-col items-center">
-						<div class="lank__header flex justify-between items-end w-full mx-auto">
-							<div class="lank__left">
-								<h1 class="lank__title flex">
-									<p>슬로우 페이지 랭킹</p>
-								</h1>
-								<div class="lank__text">
-									<p>다른 사람들은 어떤걸 읽을까 확인하기</p>
-								</div>
-							</div>
-							<div class="lank__right">
-								<button class="lank__button flex items-center justify-center">
-									<span><i class="fa-solid fa-arrow-right-long"></i></span>
-								</button>
-							</div>
-
-						</div>
-						<div class="lank__content flex items-start justify-between">
-							<div class="timeline__inner">
-								<div class="timeline-base"></div>
-								<div class="timeline-active"></div>
-								<div class="timeline-dots-wrapper">
-									<div class="timeline-dot dot-1"></div>
-									<div class="timeline-dot dot-2"></div>
-									<div class="timeline-dot dot-3"></div>
-									<div class="timeline-dot dot-4"></div>
-									<div class="timeline-dot dot-5"></div>
-								</div>
-							</div>
-							<div class="lank__item item-odd">
-								<div class="lank-number">1</div>
-								<div class="lank__box w-full">
-									<img src="./assets/images/trip3.png" alt="트래블스 북마크">
-								</div>
-								<div class="lank-shadow"></div>
-								<div class="lank-info">
-									<p>***님의 리뷰</p>
-									<p>여행을 다녀온듯 남은 것</p>
-								</div>
-							</div>
-							<div class="lank__item item-even">
-								<div class="lank-number">2</div>
-								<div class="lank__box w-full">
-									<img src="./assets/images/rain2.jpg"alt="마이 비 데이">
-								</div>
-								<div class="lank-shadow"></div>
-								<div class="lank-info">
-									<p>***님의 리뷰</p>
-									<p>20대 초반에 봤다면 더 좋았을 텐데!</p>
-								</div>
-							</div>
-							<div class="lank__item item-odd">
-								<div class="lank-number">3</div>
-								<div class="lank__box w-full">
-									<img src="./assets/images/trip4.jpg" alt="아이슬란드를 여행하기">
-								</div>
-								<div class="lank-shadow"></div>
-								<div class="lank-info">
-									<p>***님의 리뷰</p>
-									<p>관계를 만들어가는 것을 생각하게함</p>
-								</div>
-							</div>
-							<div class="lank__item item-even">
-								<div class="lank-number">4</div>
-								<div class="lank__box w-full">
-									<img src="./assets/images/heart2.png" alt="움직이는 마음들">
-								</div>
-								<div class="lank-shadow"></div>
-								<div class="lank-info">
-									<p>***님의 리뷰</p>
-									<p>마음이 움직인다는 건 뭘까</p>
-								</div>
-							</div>
-							<div class="lank__item item-odd">
-								<div class="lank-number">5</div>
-								<div class="lank__box w-full">
-									<img src="./assets/images/lovebrave.webp" alt="사랑한다고 말할 용기">
-								</div>
-								<div class="lank-shadow"></div>
-								<div class="lank-info">
-									<p>***님의 리뷰</p>
-									<p>사랑한다고 말할 용기!</p>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			<!-- section-9: 커뮤니티 -->
-			<section class="section-9 parallax-section">
-				<div class="parallax max-w-[1602px] w-full mx-auto px-[24px] lg:px-[40px]">
-					<div class="parallax__inner w-full flex items-center justify-content">
-						<div class="parallax__content flex items-center justify-between w-full">
-							<!--  커뮤니티 영역	-->
-							<div class="community__box flex flex-col justify-center w-full">
-								<h1 class="community-title">커뮤니티</h1>
-								<p class="community-text">어떤 이야기든 일상생활 Talk</p>
-								<span class="btn-talk">톡 하러가기
-									<i class="fa-solid fa-arrow-right-long"></i>
-								</span>
-							</div>
-							<div class="memo__box flex flex-col items-center justify-center w-full">
-								<div class="memo__wrap flex flex-col w-full">
-									<div class="memo__inner flex flex-col items-center w-full">
-										<div class="memo__content">
-											<h1 class="memo-title">오늘 저녁</h1>
-											<p class="memo-text">주말이여 안녕...하루종일 밀당만 하다 가는구나...</p>
-										</div>
-										<div class="memo-photo flex justify-center w-full">
-											<img src="https://picsum.photos/300/150" alt="메모사진">
-										</div>
-										<span class="divider"></span>
-										<!-- 작성자 정보 -->
-										<div class="sns-item w-full flex flex-col items-center justify-center">
-											<div class="sns-info w-full flex items-center justify-start">
-												<div class="privacy-img">
-													<img src="https://picsum.photos/30/30" alt="사용자">
-												</div>
-												<div class="sns-name flex items-center">
-													<span class="nickName">도심속 강아지</span>
-												</div>
-											</div>
-											<div class="sns-state flex items-center">
-												<div class="sns-meta flex items-center justify-between">
-													<span class="date">2025. 12. 07 18:51</span>
-													<div class="icon-item flex items-center">
-
-													</div>
-												</div>
-												<div class="icon-group flex ">
-													<div class="sns-icon flex items-center">
-														<i class="fa-regular fa-heart"></i>
-														<span>0</span>
-													</div>
-													<div class="sns-icon flex items-center">
-														<i class="fa-regular fa-comment-dots"></i>
-														<span>1</span>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- 모바일용 톡버튼	 -->
-							<span class="mobile-btn-talk">톡 하러가기
-								<i class="fa-solid fa-arrow-right-long"></i>
-							</span>
-						</div>
-					</div>
-				</div>
-
-			</section>
-
-		</div>
-	</main>
-
- <!-- 푸터 시작  -->
-	<footer id="footer-wrap">
-
-		<!-- PC 푸터 -->
-		<div id="pc-footer">
-			<div class="footer-inner w-full">
-				<div class="content__box w-full flex flex-col items-center justify-center">
-					<div class="content__top w-full flex items-center justify-center">
-						<div class="contact">
-							<div class="contact-tit tit">contact</div>
-							<div class="contact-info infor">
-								<p>privacy@gmail.com</p>
-								<p>대표번호 1544-3800</p>
-								<p>경기도 안산시 단원구 중앙대로 929</p>
-							</div>
-						</div>
-						<div class="info">
-							<div class="info-tit tit">Info</div>
-							<div class="info-list infor">
-								<p>제2026-경기안산-3332호</p>
-								<p>266-81-02738</p>
-								<div class="guide flex gap-[1rem]">
-									<p>Privacy</p>
-									<p>Policy</p>
-									<p>About Us</p>
-								</div>
-
-							</div>
-						</div>
-						<div class="follow-us flex flex-col">
-							<div class="follow-tit tit">Follow Us</div>
-							<div class="follow-info">
-								<ul class="flex items-center">
-									<li class="insta">
-										<a href="#">
-											<img src="./assets/icon/instagram.png" alt="인스타 아이콘">
-										</a>
-									</li>
-									<li class="youtube">
-										<a href="#">
-											<img src="./assets/icon/youtube.png" alt="유투브 아이콘">
-										</a>
-									</li>
-									<li class="kakaotalk">
-										<a href="#">
-											<img src="./assets/icon/kakaotalk.png" alt="카카오톡 아이콘">
-										</a>
-									</li>
-									<li class="naverCafe">
-										<a href="#">
-											<img src="./assets/icon/naver-cafe.png" alt="네이버 카페">
-										</a>
-									</li>
-								</ul>
-							</div>
-
-						</div>
-					</div>
-					<div class="line"></div>
-					<div class="content__bottom flex items-center justify-center">
-						<div class="copyright">
-							<p>Copyright ©2026 slowpage. All rights Reserved</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- 모바일 푸터-->
-		<div id="mobile-footer">
-			<div class="footer-inner w-full">
-				<div class="content__box w-full flex flex-col items-center justify-center">
-					<div class="content__top w-full flex flex-col items-center justify-center">
-						<div class="contact">
-							<div class="contact-info infor">
-								<p>privacy@gmail.com</p>
-								<p>대표번호 1544-3800</p>
-								<p>경기도 안산시 단원구 중앙대로 929</p>
-							</div>
-						</div>
-						<div class="guide flex flex-col">
-							<p>Privacy</p>
-							<p>Policy</p>
-							<p>About Us</p>
-						</div>
-					</div>
-					<div class="line"></div>
-
-					<div class="content__bottom flex flex-col items-center justify-center">
-						<div class="follow-us flex flex-col">
-							<div class="follow-info">
-								<ul class="flex items-center">
-									<li class="insta">
-										<a href="#">
-											<img src="./assets/icon/instagram.png" alt="인스타 아이콘">
-										</a>
-									</li>
-									<li class="youtube">
-										<a href="#">
-											<img src="./assets/icon/youtube.png" alt="유투브 아이콘">
-										</a>
-									</li>
-									<li class="kakaotalk">
-										<a href="#">
-											<img src="./assets/icon/kakaotalk.png" alt="카카오톡 아이콘">
-										</a>
-									</li>
-									<li class="naverCafe">
-										<a href="#">
-											<img src="./assets/icon/naver-cafe.png" alt="네이버 카페">
-										</a>
-									</li>
-								</ul>
-							</div>
-
-						</div>
-						<div class="copyright">
-							<p>Copyright ©2026 slowpage. All rights Reserved</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-	</footer>
-	<!-- 푸터 끝  -->	
-	 </div>
+              <div
+                class="content__bottom flex flex-col items-center justify-center"
+              >
+                <div class="follow-us flex flex-col">
+                  <div class="follow-info">
+                    <ul class="flex items-center">
+                      <li class="insta">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/instagram.png"
+                            alt="인스타 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="youtube">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/youtube.png"
+                            alt="유투브 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="kakaotalk">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/kakaotalk.png"
+                            alt="카카오톡 아이콘"
+                          />
+                        </a>
+                      </li>
+                      <li class="naverCafe">
+                        <a href="#">
+                          <img
+                            src="./assets/icon/naver-cafe.png"
+                            alt="네이버 카페"
+                          />
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="copyright">
+                  <p>Copyright ©2026 slowpage. All rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- 푸터 끝  -->
+    </div>
   </body>
 </html>
