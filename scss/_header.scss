@@ -168,105 +168,106 @@
     }
 
     // 모바일 600px이하일때
-    @media (max-width: 601px) {
-      .header-wrap {
-        .header-top-bar {
-          display: none;
+    @media (max-width: 600px) {
+      .header-top-bar {
+        display: none;
+      }
+      // 모바일 헤더
+      .mobile-header-top-bar {
+        display: flex;
+        height: auto;
+        background-color: transparent;
+        transition:
+          background-color 0.3s ease,
+          backdrop-filter 0.3s ease;
+
+        &.is-active {
+          background-color: rgba(235, 228, 220, 0.05);
+          backdrop-filter: blur(5px);
+          box-shadow: 0 4px 20px rgba(97, 66, 49, 0.05);
+          border-bottom: 1px solid rgba(97, 66, 49, 0.08);
+          backdrop-filter: blur(5px);
+          -webkit-backdrop-filter: blur(5px);
+          z-index: 50;
         }
-        // 모바일 헤더
-        .mobile-header-top-bar {
-          display: block;
-          height: auto;
-          background-color: transparent;
-          transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
 
-          &.is-active {
-            background-color: rgba(235, 228, 220, 0.05);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 4px 20px rgba(97, 66, 49, 0.05);
-            border-bottom: 1px solid rgba(97, 66, 49, 0.08);
-            backdrop-filter: blur(5px);
-            -webkit-backdrop-filter: blur(5px);
-            z-index: 50;
+        &.is-hidden {
+          transform: translateY(-100%);
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .con {
+          padding-inline: 4.7vw;
+
+          .top-bar {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            min-height: 10vw;
+            margin-top: 0.5rem;
           }
 
-          &.is-hidden {
-            transform: translateY(-100%);
-            opacity: 0;
-            pointer-events: none;
+          .header-top-bar__left {
+            justify-self: start;
           }
+          .header-top-bar__mid {
+            justify-self: center;
 
-          .con {
-            padding-inline: 4.7vw;
+            .logo-box {
+              gap: 1rem;
 
-            .top-bar {
-              display: grid;
-              grid-template-columns: 1fr auto 1fr;
-              align-items: center;
-              min-height: 10vw;
-              margin-top: 0.5rem;
-            }
-
-            .header-top-bar__left {
-              justify-self: start;
-            }
-            .header-top-bar__mid {
-              justify-self: center;
-
-              .logo-box {
-                gap: 1rem;
-
-                .logo {
-                  a {
-                    font-size: $mobile-logo-font-size;
-                    white-space: nowrap;
-                  }
-                }
-              }
-            }
-            .header-top-bar__right {
-              justify-self: end;
-
-              .util-box {
-                width: 100%;
-                gap: 0.7rem;
-
+              .logo {
                 a {
-                  display: flex;
-                  color: #5a5858;
-
-                  img {
-                    width: $util-icon-size;
-                  }
+                  font-size: $mobile-logo-font-size;
+                  white-space: nowrap;
                 }
               }
             }
+          }
+          .header-top-bar__right {
+            justify-self: end;
 
-            // 메뉴리스트
-            .menu-box {
-              padding-top: 0.4rem;
+            .util-box {
+              width: 100%;
+              gap: 0.7rem;
+              justify-content: flex-end;
 
-              .menu-inner {
-                min-width: 300px;
-                margin: 0 auto;
+              a {
+                display: flex;
+                color: #5a5858;
 
-                .menu-list {
-                  gap: 3vw;
-                  flex-wrap: wrap;
+                img {
+                  width: $util-icon-size;
+                }
+              }
+            }
+          }
 
-                  li a {
-                    font-size: $menu-font-size;
-                    color: $title-font-color-default;
-                    font-weight: 500;
-                    letter-spacing: 2;
-                  }
-                  .menu-list__item {
-                    letter-spacing: -0.02rem;
-                  }
+          // 메뉴리스트
+          .menu-box {
+            padding-top: 0.4rem;
 
-                  .item-tag {
-                    font-weight: 700;
-                  }
+            .menu-inner {
+              min-width: 300px;
+              margin: 0 auto;
+
+              .menu-list {
+                gap: 3vw;
+                flex-wrap: wrap;
+
+                li a {
+                  font-size: $menu-font-size;
+                  color: $title-font-color-default;
+                  font-weight: 500;
+                  letter-spacing: 2;
+                }
+                .menu-list__item {
+                  letter-spacing: -0.02rem;
+                }
+
+                .item-tag {
+                  font-weight: 700;
                 }
               }
             }
