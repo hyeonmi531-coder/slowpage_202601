@@ -162,7 +162,7 @@ body {
     display: none;
   }
   #header-top .header-wrap .mobile-header-top-bar {
-    display: flex;
+    display: block;
     height: auto;
     background-color: transparent;
     transition: background-color 0.3s ease, -webkit-backdrop-filter 0.3s ease;
