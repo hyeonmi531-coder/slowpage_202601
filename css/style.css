@@ -708,7 +708,6 @@ body {
   justify-content: center;
 }
 .main-wrap .content .section-3 .subscription__content .monthly-area .sub-item .sub-book a img {
-  aspect-ratio: 3/4;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   transition: transform 0.3s;

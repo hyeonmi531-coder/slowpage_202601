@@ -16,7 +16,9 @@
     .section-1 {
       display: block;
       opacity: 0;
-      transition: opacity 1.2s ease-out, margin-top 1.2s ease-out;
+      transition:
+        opacity 1.2s ease-out,
+        margin-top 1.2s ease-out;
       margin-top: 40px;
 
       &.active {
@@ -157,7 +159,8 @@
             inset: 0;
             border-radius: 50%;
             border: 3px solid rgba(255, 253, 245, 0.85); /* 크림 화이트*/
-            box-shadow: 0 0 12px rgba(97, 66, 49, 0.55),
+            box-shadow:
+              0 0 12px rgba(97, 66, 49, 0.55),
               0 0 30px rgba(97, 66, 49, 0.35); /* 브라운 그로우 은은한 빛 퍼짐 */
             z-index: 3;
             animation: wavePulse 6s ease-in-out infinite;
@@ -272,7 +275,8 @@
             .attention-con {
               border-radius: 15px;
               background: rgba(255, 255, 255, 0.08);
-              box-shadow: 0 12px 26px rgba(0, 0, 0, 0.25),
+              box-shadow:
+                0 12px 26px rgba(0, 0, 0, 0.25),
                 inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 
               backdrop-filter: blur(2px);
@@ -383,7 +387,6 @@
                 justify-content: center;
 
                 img {
-                  aspect-ratio: 3 / 4;
                   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
                   border-radius: 5px;
                   transition: transform 0.3s;
@@ -402,7 +405,6 @@
 
                 .text {
                   font-weight: 500;
-                  // font-size: $text-font-size-default;
                   text-align: center;
                   white-space: nowrap;
                   color: $text-font-color-default;
@@ -511,7 +513,8 @@
                 aspect-ratio: 4 / 3;
                 border-radius: 20px;
                 overflow: hidden;
-                box-shadow: 0 14px 28px rgba(97, 66, 49, 0.22),
+                box-shadow:
+                  0 14px 28px rgba(97, 66, 49, 0.22),
                   0 4px 10px rgba(97, 66, 49, 0.12);
               }
 
@@ -534,7 +537,8 @@
 
                   &:hover {
                     transform: translateY(-2px);
-                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08),
+                    box-shadow:
+                      0 6px 12px rgba(0, 0, 0, 0.08),
                       0 14px 28px rgba(0, 0, 0, 0.12);
                   }
 
@@ -548,7 +552,8 @@
                     font-size: $text-font-size-default;
                     font-weight: 450;
                     color: $large-button-color;
-                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06),
+                    box-shadow:
+                      0 2px 4px rgba(0, 0, 0, 0.06),
                       0 8px 18px rgba(0, 0, 0, 0.08);
                     transition: all 0.25s ease;
                     cursor: pointer;
@@ -567,7 +572,9 @@
                     overflow: hidden;
                     opacity: 0;
                     padding: 0 1.4rem;
-                    transition: max-height 0.45s ease, opacity 0.35s ease;
+                    transition:
+                      max-height 0.45s ease,
+                      opacity 0.35s ease;
                     z-index: 5;
                     background-color: #fff;
 
@@ -650,7 +657,9 @@
 
             opacity: 0;
             transform: translateY(10px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition:
+              opacity 0.5s ease,
+              transform 0.5s ease;
             transition-delay: 0.6s;
 
             .band-title {
@@ -670,7 +679,9 @@
             height: auto;
 
             opacity: 0;
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition:
+              opacity 0.5s ease,
+              transform 0.5s ease;
             transition-delay: 0.9s;
 
             img {
@@ -811,7 +822,8 @@
                   font-size: $text-font-size-default;
                   opacity: 0;
                   transform: translateY(100%); // 숨겨진 상태
-                  transition: opacity $transition-speed ease,
+                  transition:
+                    opacity $transition-speed ease,
                     transform $transition-speed ease;
                 }
 
@@ -929,7 +941,8 @@
         position: absolute;
         inset: 0;
         // bottom: -30vh;
-        background: radial-gradient(
+        background:
+          radial-gradient(
             circle at 20% 30%,
             rgba(223, 212, 201, 0.4) 0%,
             transparent 50%
@@ -1299,7 +1312,8 @@
               width: 100%;
               aspect-ratio: 2 / 3;
               border-radius: 12px;
-              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+              box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.2),
                 0 20px 60px rgba(0, 0, 0, 0.15);
 
               &:hover {
@@ -2040,7 +2054,9 @@
           display: block !important;
           opacity: 0;
           margin-top: 40px; /* 40px 아래에서 시작 */
-          transition: opacity 1.2s ease-out, margin-top 1.2s ease-out;
+          transition:
+            opacity 1.2s ease-out,
+            margin-top 1.2s ease-out;
 
           &.active {
             opacity: 1;
