@@ -1,6 +1,7 @@
 // ============================================
 // Common - 공통 스타일
 // ============================================
+@use "variables" as *;
 
 .font-Nothing-You-Could-Do {
   font-family: "Nothing You Could Do";
@@ -25,5 +26,81 @@ body {
   // body 별도로 분리
   @media (max-width: 601px) {
     background-size: 600px auto;
+  }
+}
+
+// 퀵메뉴
+.quickMenuList {
+  display: none;
+  right: 3%;
+  bottom: 5vh;
+  z-index: 100;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0.9;
+
+    [class^="icon"] {
+      display: inline-block;
+      width: 2.8rem;
+      height: 2.8rem;
+      background-color: $quick-btn-q2;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 24px;
+      border-radius: 50%;
+
+      @media (max-width: 768px) {
+        width: 2.2rem;
+        height: 2.2rem;
+        background-size: 18px;
+      }
+    }
+
+    .icon-top {
+      background-image: url(https://raw.githubusercontent.com/hyeonmi531-coder/my-images/refs/heads/main/arrow-top.png);
+      color: #fff;
+      font-size: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 0.8rem;
+      }
+    }
+
+    .chat-text {
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+      margin-block: 0.5rem;
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+
+    .icon-chatbot {
+      background-image: url(https://raw.githubusercontent.com/hyeonmi531-coder/my-images/refs/heads/main/chatbot_book_white.png);
+      background-color: $quick-btn-q2;
+    }
+
+    .btn-chat-capsule {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      width: 3.3rem;
+      height: auto;
+      padding: 0.3rem 0.2rem 0.3rem;
+      background-color: $quick-btn-q3;
+      border-radius: 40px;
+
+      @media (max-width: 768px) {
+        width: 2.6rem;
+        padding: 0.2rem 0.15rem;
+        background-color: transparent;
+      }
+    }
   }
 }

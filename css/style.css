@@ -23,6 +23,79 @@ body {
   }
 }
 
+.quickMenuList {
+  display: none;
+  right: 3%;
+  bottom: 5vh;
+  z-index: 100;
+}
+.quickMenuList div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0.9;
+}
+.quickMenuList div [class^=icon] {
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.8rem;
+  background-color: #81685a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border-radius: 50%;
+}
+@media (max-width: 768px) {
+  .quickMenuList div [class^=icon] {
+    width: 2.2rem;
+    height: 2.2rem;
+    background-size: 18px;
+  }
+}
+.quickMenuList div .icon-top {
+  background-image: url(https://raw.githubusercontent.com/hyeonmi531-coder/my-images/refs/heads/main/arrow-top.png);
+  color: #fff;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .quickMenuList div .icon-top {
+    font-size: 0.8rem;
+  }
+}
+.quickMenuList div .chat-text {
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  margin-block: 0.5rem;
+}
+@media (max-width: 768px) {
+  .quickMenuList div .chat-text {
+    display: none;
+  }
+}
+.quickMenuList div .icon-chatbot {
+  background-image: url(https://raw.githubusercontent.com/hyeonmi531-coder/my-images/refs/heads/main/chatbot_book_white.png);
+  background-color: #81685a;
+}
+.quickMenuList div .btn-chat-capsule {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 3.3rem;
+  height: auto;
+  padding: 0.3rem 0.2rem 0.3rem;
+  background-color: #a08e83;
+  border-radius: 40px;
+}
+@media (max-width: 768px) {
+  .quickMenuList div .btn-chat-capsule {
+    width: 2.6rem;
+    padding: 0.2rem 0.15rem;
+    background-color: transparent;
+  }
+}
+
 #header-top {
   top: 0;
   inset-inline: 0;

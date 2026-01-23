@@ -134,7 +134,7 @@ AOS.init();
 // 섹션4: tag-box 아코디언 끝 시작
 function tagAccordionInit() {
   const isDesktop = window.matchMedia(
-    "(hover: hover) and (pointer: fine)"
+    "(hover: hover) and (pointer: fine)",
   ).matches;
   const $items = $(".large-button");
 
@@ -311,7 +311,7 @@ const observer = new IntersectionObserver(
 
         // 섹션6에 처음 진입했을 때 첫 번째 슬라이드 형광펜 강제 실행
         const firstActiveSlide = document.querySelector(
-          ".section-6 .swiper-slide-active"
+          ".section-6 .swiper-slide-active",
         );
         if (firstActiveSlide) {
           const hls = firstActiveSlide.querySelectorAll(".hl");
@@ -320,7 +320,7 @@ const observer = new IntersectionObserver(
       }
     });
   },
-  { threshold: 0.3 }
+  { threshold: 0.3 },
 ); // 30%만 보여도 실행되게 조정
 
 const section6 = document.querySelector(".section-6");
@@ -408,7 +408,7 @@ window.onload = function () {
           duration: 2,
           ease: "none",
         },
-        "<"
+        "<",
       ); // 위 opacity 애니메이션과 동시에 시작
 
       //  1. 책 표지가 왼쪽으로 110도 열림 + 살짝 앞으로 다가옴
@@ -429,7 +429,7 @@ window.onload = function () {
           duration: 15,
           ease: "none",
         },
-        "-=3"
+        "-=3",
       ); // 순서 1이 끝나기 3초 전(겹침)
 
       //  3. 인트로 레이어 사라짐 (영상이 커질 때 같이 사라짐)
@@ -441,7 +441,7 @@ window.onload = function () {
           ease: "power2.in",
           duration: 10,
         },
-        "-=10"
+        "-=10",
       ); // 영상 확대 중간부터 같이 진행
 
       //  4. 카드 트랙 이동 (xPercent를 사용하여 너비 대응/ 아주 느린 이동)
@@ -453,7 +453,7 @@ window.onload = function () {
           ease: "power1.out",
           duration: isMobile ? 80 : 50, // 	카드 흘러가는 속도 길게
         },
-        cardStartDelay
+        cardStartDelay,
       );
 
       //  5. Skew 효과 (중복 호출 방지를 위해 타임라인 밖에서 별도 관리)
@@ -476,11 +476,11 @@ window.onload = function () {
               overwrite: true,
               onUpdate: () => skewSetter(skew),
               onComplete: () => skewSetter(0),
-            }
+            },
           );
         },
       });
-    }
+    },
   );
 
   ScrollTrigger.refresh();
@@ -512,7 +512,7 @@ mm.add("(min-width: 600px)", () => {
       ease: "none",
       duration: 1,
     },
-    0
+    0,
   );
 
   // 2. 아이템별 순차 애니메이션
@@ -529,7 +529,7 @@ mm.add("(min-width: 600px)", () => {
       section8Tl.to(
         dot,
         { backgroundColor: "#614231", scale: 1.5, duration: 0.1 },
-        startTime
+        startTime,
       );
     }
     // 숫자 등장 (그라데이션 포함)
@@ -549,7 +549,7 @@ mm.add("(min-width: 600px)", () => {
           filter: "drop-shadow(0 10px 15px rgba(0,0,0,0.15))",
           ease: "power2.out",
         },
-        startTime + 0.05
+        startTime + 0.05,
       );
     }
     // 책 이미지 폴짝 등장
@@ -558,7 +558,7 @@ mm.add("(min-width: 600px)", () => {
         img,
         { y: "10vh", opacity: 0, scale: 0.5 },
         { y: 0, opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)" },
-        startTime + 0.1
+        startTime + 0.1,
       );
     }
     // 그림자 등장
@@ -567,7 +567,7 @@ mm.add("(min-width: 600px)", () => {
         shadow,
         { opacity: 0, scale: 0.3 },
         { opacity: 1, scale: 1, duration: 0.3 },
-        startTime + 0.3
+        startTime + 0.3,
       );
     }
     // 리뷰 말풍선 등장 (위에서 아래로 톡!)
@@ -576,10 +576,36 @@ mm.add("(min-width: 600px)", () => {
         info,
         { opacity: 0, y: -20, scale: 0.8 },
         { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power2.out" },
-        startTime + 0.4
+        startTime + 0.4,
       );
     }
   });
 });
 
 ScrollTrigger.refresh();
+
+// 스크롤 위치에 따른 퀵메뉴 숨기기/보이기
+$(window).on("scroll", function () {
+  if ($(this).scrollTop() > 300) {
+    $(".quickMenuList").fadeIn();
+  } else {
+    $(".quickMenuList").fadeOut();
+  }
+});
+// 스크롤 top버튼
+$(function () {
+  $(".icon-top").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation(); // 이벤트 버블링 방지
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+  // 채팅 버튼 위로 올라가지 않게 설정
+  $(".btn-chat-capsule").on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+});
