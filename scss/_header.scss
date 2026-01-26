@@ -96,10 +96,29 @@
             }
 
             .bookmark {
-              transform: translateY(-1.5vw);
+              transform: translateY(-0.3vw);
+              perspective: 800px;
+              backface-visibility: hidden; /* 멈춤 방지: 레이어 분리 */
 
               img {
                 height: 8vw;
+                will-change: transform; /* 애니메이션 성능 최적화 */
+                transform-origin: top right; /* 오른쪽 위를 고정하고 왼쪽으로 펄럭이게 설정 */
+
+                /* 애니메이션 최적화: 60fps 보장 */
+                animation: flutter-optimized 3s ease-in-out infinite;
+              }
+            }
+            /* 펄럭임 애니메이션 정의 */
+            @keyframes flutter-optimized {
+              0%,
+              100% {
+                transform: rotateX(0deg) rotateZ(0deg);
+              }
+              50% {
+                /* 복잡한 translateX, skew 대신 단순 회전 위주로 변경 */
+                /* rotateX는 앞뒤, rotateZ는 좌우 회전 */
+                transform: rotateX(25deg) rotateZ(10deg);
               }
             }
           }
