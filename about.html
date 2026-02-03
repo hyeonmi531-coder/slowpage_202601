@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>sub-about</title>
+
+    <!-- 구글폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&family=Open+Sans:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- gasp 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+
+    <!-- ScrollTrigger트리거 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+    <!-- 제이쿼리 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- 테일윈드 CSS 불러오기 -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!-- AOS 불러오기 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script defer src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="sub-about">
+    <!-- site-wrap : 전체 사이트를 감싸는 용도 -->
+    <div class="site-wrap">
+      <!-- 헤더 시작	 -->
+      <header id="header-top" class="fixed flex w-full z-[40]">
+        <div class="header-wrap w-full h-full">
+          <!-- 최상단 탑배너 시작 -->
+          <div class="top-line-banner">
+            <a href="#" class="banner-text text-1"
+              ><span class="highlight">매월 소중한 책</span>&nbsp;정기구독하기 ·
+              무료배송</a
+            >
+            <a href="#" class="banner-text text-2">오늘의 밑줄 보러가기</a>
+          </div>
+          <!-- pc헤더-->
+          <div class="header-top-bar flex">
+            <div class="con flex flex-col w-full h-full">
+              <div class="top-bar flex justify-between items-center w-full">
+                <div class="header-top-bar__left flex items-center">
+                  <div class="logo-box flex items-center h-full">
+                    <h1 class="logo font-Nothing-You-Could-Do">
+                      <a href="#">slow page'</a>
+                    </h1>
+                    <div class="bookmark">
+                      <img src="./assets/images/bookmark_1.png" alt="북마크" />
+                    </div>
+                  </div>
+                </div>
+                <div class="header-top-bar__right flex items-center">
+                  <div class="util-box flex">
+                    <a href="javascript:void(0)" class="cart">
+                      <img src="./assets/icon/cart.png" alt="카트" />
+                    </a>
+                    <a href="javascript:void(0)" class="bell">
+                      <img src="./assets/icon/bell.png" alt="벨" />
+                    </a>
+                    <a href="javascript:void(0)" class="search">
+                      <img src="./assets/icon/search.png" alt="돋보기" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GNB 메뉴	-->
+              <nav class="menu-box">
+                <div class="menu-inner">
+                  <ul class="menu-list flex items-center justify-end">
+                    <li><a href="#" class="menu-list__item">About</a></li>
+                    <li>
+                      <a href="#news-letter" class="menu-list__item"
+                        >News-letter</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#community" class="menu-list__item">Community</a>
+                    </li>
+                    <li>
+                      <a href="#tag" class="menu-list__item item-tag">#Tag</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" class="menu-list__item"
+                        >Shop</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <!-- 모바일헤더	 -->
+          <div class="mobile-header-top-bar fixed w-full">
+            <div class="con block w-full h-full">
+              <div class="top-bar w-full">
+                <div class="header-top-bar__left">
+                  <a href="#" class="hamburger">
+                    <img src="./assets/icon/burger.png" alt="햄버거" />
+                  </a>
+                </div>
+                <div class="header-top-bar__mid flex items-center">
+                  <div class="logo-box flex items-center justify-center h-full">
+                    <h1 class="logo font-Nothing-You-Could-Do">
+                      <a href="#">slow page'</a>
+                    </h1>
+                  </div>
+                </div>
+                <div class="header-top-bar__right flex items-center">
+                  <div class="util-box flex">
+                    <a href="javascript:void(0)" class="bell">
+                      <img src="./assets/icon/bell.png" alt="벨" />
+                    </a>
+                    <a href="javascript:void(0)" class="search">
+                      <img src="./assets/icon/search.png" alt="돋보기" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <nav class="menu-box">
+                <div class="menu-inner flex w-full">
+                  <ul class="menu-list flex justify-center w-full">
+                    <li><a href="#" class="menu-list__item">About</a></li>
+                    <li>
+                      <a href="#news-letter" class="menu-list__item"
+                        >News-letter</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#community" class="menu-list__item">Community</a>
+                    </li>
+                    <li>
+                      <a href="#tag" class="menu-list__item item-tag">#Tag</a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" class="menu-list__item"
+                        >Shop</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- 헤더 끝	 -->
+    </div>
+  </body>
+</html>

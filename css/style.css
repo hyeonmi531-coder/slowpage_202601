@@ -12,14 +12,16 @@ body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
-  background-image: url(../assets/images/bg.jpg);
+}
+body.main {
+  background-image: url("../assets/images/bg.jpg");
   background-position: top center;
   background-size: 100%;
   background-repeat: no-repeat;
   background-attachment: scroll;
 }
 @media (max-width: 601px) {
-  body {
+  body.main {
     background-size: 600px auto;
   }
 }
@@ -163,6 +165,8 @@ body {
   background-color: rgba(235, 228, 220, 0.05); /* 바뀔 불투명 배경 */
   backdrop-filter: blur(5px); /* 유리창 효과 */
   -webkit-backdrop-filter: blur(5px);
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
   border-bottom: 1px solid rgba(97, 66, 49, 0.08);
   box-shadow: 0 4px 20px rgba(97, 66, 49, 0.05);
 }
@@ -172,33 +176,19 @@ body {
 #header-top .header-wrap .header-top-bar .con .header-top-bar__left .logo-box {
   text-align: left;
   gap: 1rem;
-  /* 펄럭임 애니메이션 정의 */
 }
 #header-top .header-wrap .header-top-bar .con .header-top-bar__left .logo-box .logo a {
   font-size: 5vw;
   white-space: nowrap;
 }
 #header-top .header-wrap .header-top-bar .con .header-top-bar__left .logo-box .bookmark {
-  transform: translateY(-0.3vw);
+  transform: translateY(-1.3vw);
   perspective: 800px;
   backface-visibility: hidden; /* 멈춤 방지: 레이어 분리 */
 }
 #header-top .header-wrap .header-top-bar .con .header-top-bar__left .logo-box .bookmark img {
   height: 8vw;
-  will-change: transform; /* 애니메이션 성능 최적화 */
   transform-origin: top right; /* 오른쪽 위를 고정하고 왼쪽으로 펄럭이게 설정 */
-  /* 애니메이션 최적화: 60fps 보장 */
-  animation: flutter-optimized 3s ease-in-out infinite;
-}
-@keyframes flutter-optimized {
-  0%, 100% {
-    transform: rotateX(0deg) rotateZ(0deg);
-  }
-  50% {
-    /* 복잡한 translateX, skew 대신 단순 회전 위주로 변경 */
-    /* rotateX는 앞뒤, rotateZ는 좌우 회전 */
-    transform: rotateX(25deg) rotateZ(10deg);
-  }
 }
 #header-top .header-wrap .header-top-bar .con .header-top-bar__right .util-box {
   width: 80%;
