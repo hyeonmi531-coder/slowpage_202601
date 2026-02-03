@@ -17,16 +17,18 @@ body {
   font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
 
-  // 배경 설정 (PC 기본)
-  background-image: url(../assets/images/bg.jpg);
-  background-position: top center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  &.main {
+    // 메인페이지 배경 설정 (PC 기본)
+    background-image: url("../assets/images/bg.jpg");
+    background-position: top center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
 
-  // body 별도로 분리
-  @media (max-width: 601px) {
-    background-size: 600px auto;
+    // body 별도로 분리
+    @media (max-width: 601px) {
+      background-size: 600px auto;
+    }
   }
 }
 
